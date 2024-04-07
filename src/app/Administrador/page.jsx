@@ -1,6 +1,6 @@
 import { parse } from 'papaparse';
 
-const fetchPreguntas = async () => {
+export const fetchPreguntas = async () => {
     const response = await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSuLH4t-YFmRI5phxbxvBEo9uRQaRP-P70Kpoa3PT7ZwRPWmiJdEwduLz5bKkSBWxGQV2ynDHHWIpYJ/pub?output=csv", { next: { revalidate: 30 } });
     const csvData = await response.text();
     const jsonData = parse(csvData, { header: true });
@@ -12,7 +12,7 @@ export default async function AdminPage() {
     return (
         <>
             <h4 className='me-2 ms-2'>Fetching de preguntas</h4>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">Pregunta</th>

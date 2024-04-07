@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <main >
+    <main>
       <ul class="nav bg-dark">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Active</a>
