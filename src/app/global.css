@@ -1,0 +1,4 @@
+/* PARA QUITAR LA BARRA DE DESPLAZAMIENTO */
+body::-webkit-scrollbar {
+    display: none;
+}

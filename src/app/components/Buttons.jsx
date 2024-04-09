@@ -1,8 +1,8 @@
 'use client'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-export function Buttons() {
+export function Buttons({totalPreguntas}) {
     const [count, setCount] = useState(0);
 
     const searchParams = useSearchParams();
@@ -11,46 +11,27 @@ export function Buttons() {
 
     const params = new URLSearchParams(searchParams);
 
+    // console.log('total preguntas:', totalPreguntas);
     const handleNextClick = () => {
-        setCount(count + 1);
-        params.set('index', count)
-        replace(`${pathname}?${params.toString()}`)
+        if (count === totalPreguntas - 1) return 
+        setCount(count => count + 1);
     }
 
     const handlePrevClick = () => {
-        setCount(count - 1);
+        if (count === 0) return
+        setCount(count  => count - 1);
+    }
+
+    useEffect(() => {
         params.set('index', count)
         replace(`${pathname}?${params.toString()}`)
-    }
+    }, [count, pathname, replace]);
+
     return (
         <> 
             <button type="button" className="btn btn-primary me-4" onClick={handlePrevClick}>Anterior</button>
-            <button type="button" className="btn btn-primary" onClick={handleNextClick}>Siguiente</button>
+            <button type="button" className="btn btn-primary" onClick={handleNextClick} >Siguiente</button>
         </>
 
     )
 }
-
-// export function PrevButton() {
-//     const [count, setCount] = useState(0);
-
-//     const searchParams = useSearchParams();
-//     const pathname = usePathname();
-//     const { replace } = useRouter();
-
-//     const params = new URLSearchParams(searchParams);
-
-//     const handlePrevClick = () => {
-//         if (count === 0) {
-//             params.delete('index')
-//             console.log('delete')
-//         } else {
-//             setCount(count - 1);
-//             params.set('index', count)
-//             replace(`${pathname}?${params.toString()}`)
-//         }
-//     }
-//     return (
-//         <button type="button" className="btn btn-primary me-4" onClick={handlePrevClick}>Anterior</button>
-//     )
-// }

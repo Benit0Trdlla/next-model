@@ -1,10 +1,12 @@
 import { fetchPreguntas } from "../../app/Administrador/page";
-import { Buttons} from "../../app/components/Buttons";
+import { Buttons } from "../../app/components/Buttons";
+import { OpcionsAndAlerts } from "../../app/components/Opcions";
 
-export default async function NivelUnoPage({searchParams}) {
+export default async function NivelUnoPage({ searchParams }) {
     const preguntas = await fetchPreguntas();
-    const pregunta = preguntas[searchParams?.index || 0]; // Obtener solo la primera pregunta
-
+    const totalPreguntas = preguntas.length;
+    const numIndex = searchParams?.index;
+    const pregunta = preguntas[searchParams?.index || 0]; // Obtener solo una pregunta
     return (
         <>
             <header id="header">
@@ -32,15 +34,18 @@ export default async function NivelUnoPage({searchParams}) {
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center py-1">
                         <div className="col-md-6">
-                            <h6>{pregunta.Enunciado}</h6>
-                            <p>A:{pregunta.A}</p>
-                            <p>B:{pregunta.B}</p>
-                            <p>C:{pregunta.C}</p>
-                            <p>D:{pregunta.D}</p>
+                            <h6 className="text-center">{pregunta.Enunciado}</h6>
+                            {/* <p className="text-danger">IMPORTANTE LA FORMA DE ESCRIBIR LAS OPCIONES Y LA RESPUESTA CORRECTA DEBEN SER LA MISMA. </p> */}
+                            <OpcionsAndAlerts justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
+                                { value: pregunta.A },
+                                { value: pregunta.B },
+                                { value: pregunta.C },
+                                { value: pregunta.D }
+                            ]} />
                             {/* <p>Respuesta Correcta: {pregunta.Respuestas}</p> */}
                             {/* <p>{pregunta.Explicación}</p> */}
                             <div className="d-flex justify-content-center">
-                                <Buttons />
+                                <Buttons totalPreguntas={totalPreguntas} />
                             </div>
                         </div>
                         <div className="col-md-6 mt-3">
