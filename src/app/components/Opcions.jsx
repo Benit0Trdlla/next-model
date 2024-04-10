@@ -1,9 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react';
-import Cronometro from '../../app/components/Cronometro';
+// import Cronometro from '../../app/components/Cronometro';
 
 export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent }) {
-
     const [alert, setAlert] = useState(false)
     const [alert2, setAlert2] = useState(false)
 
@@ -26,7 +25,7 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
 
     return (
         <>
-            <Cronometro/>
+            {/* <Cronometro/> */}
             <div className='mb-4 ms-4'>
                 {opciones.map((opcion) => (
                     <div className="form-check" key={opcion.value}>

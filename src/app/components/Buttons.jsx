@@ -4,6 +4,7 @@ import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
 export function Buttons({ totalPreguntas }) {
     const [count, setCount] = useState(0);
+    const [stateTimer, setStateTimer] = useState(true);
 
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -13,7 +14,10 @@ export function Buttons({ totalPreguntas }) {
 
     // console.log('total preguntas:', totalPreguntas);
     const handleNextClick = () => {
-        if (count === totalPreguntas - 1) return
+        if (count === totalPreguntas - 1) {
+            setStateTimer(false)
+            return
+        }
         setCount(count => count + 1);
     }
 
@@ -26,6 +30,11 @@ export function Buttons({ totalPreguntas }) {
         params.set('index', count)
         replace(`${pathname}?${params.toString()}`)
     }, [count, pathname, replace]);
+
+    useEffect(() => {
+        params.set('state', stateTimer)
+        replace(`${pathname}?${params.toString()}`)
+    }, [stateTimer, pathname, replace])
 
     return (
         <>
