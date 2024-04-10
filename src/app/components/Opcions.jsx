@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
+import Cronometro from '../../app/components/Cronometro';
 
 export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent }) {
 
@@ -20,12 +21,12 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
     useEffect(() => {
         setAlert(false)
         setAlert2(false)
-        console.log('CAMBIO');
     }, [numIndex]);
 
 
     return (
         <>
+            <Cronometro/>
             <div className='mb-4 ms-4'>
                 {opciones.map((opcion) => (
                     <div className="form-check" key={opcion.value}>
@@ -39,7 +40,7 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
             {alert ? <div className="alert alert-success" role="alert">
                 Respuesta Correcta
             </div> : null}
-            {alert2 ? <div className="alert alert-danger" role="alert">
+            {alert2 ? (<div className="alert alert-danger" role="alert">
                 La respuesta correcta: {correctAnswer} <a className="" data-bs-toggle="modal" data-bs-target="#Modaljustificacion"><strong>Conocé la justificación. Haz Click aquí.</strong></a>
                 {/* MODAL */}
                 <div className="modal fade" id="Modaljustificacion" aria-labelledby="ModalJustify" aria-hidden="true">
@@ -54,7 +55,7 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
                         </div>
                     </div>
                 </div>
-            </div> : null}
+            </div>) : null}
         </>
     )
 }
