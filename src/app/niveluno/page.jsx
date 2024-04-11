@@ -40,7 +40,7 @@ export default async function NivelUnoPage({ searchParams }) {
                     <div className="row d-flex align-items-center justify-content-center py-1">
                         <div className="col-md-6 mt-3">
                             <h6 className="text-center">{pregunta.Enunciado}</h6>
-                            <p className="text-danger">IMPORTANTE LA FORMA DE ESCRIBIR LAS OPCIONES Y LA RESPUESTA CORRECTA DEBEN SER LA MISMA. </p>
+                            {/* <p className="text-danger">IMPORTANTE LA FORMA DE ESCRIBIR LAS OPCIONES Y LA RESPUESTA CORRECTA DEBEN SER LA MISMA. </p> */}
                             <OpcionsAndAlerts justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
                                 { value: pregunta.A },
                                 { value: pregunta.B },
