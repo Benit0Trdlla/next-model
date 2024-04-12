@@ -1,13 +1,15 @@
 'use client'
 import { useState, useEffect } from 'react';
-// import Cronometro from '../../app/components/Cronometro';
 
-export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent }) {
+
+export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent}) {
     const [alert, setAlert] = useState(false)
     const [alert2, setAlert2] = useState(false)
 
     const handleOptionChange = (event) => {
-        const selectedValue = event.target.value;
+        const selectedValue = event.target.value;   
+        // agregar a la URL si respondio o no (porejemplo asked=false cuando no respondio y asked=true cuando respondio) y
+        //  en el componente de los botones leer la URL y habilitar el boton de siguiente pregunta.
         if (selectedValue === correctAnswer) {
             setAlert(true)
             setAlert2(false)
@@ -22,19 +24,17 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
         setAlert2(false)
     }, [numIndex]);
 
-
     return (
         <>
-            {/* <Cronometro/> */}
             <div className='mb-4 ms-4'>
-                {opciones.map((opcion) => (
-                    <div className="form-check" key={opcion.value}>
-                        <input className="form-check-input" type="radio" name="flexRadioDefault" value={opcion.value} onChange={handleOptionChange} />
-                        <label className="form-check-label">
-                            {opcion.value}
-                        </label>
-                    </div>
-                ))}
+            {opciones.map((opcion) => (
+                <div className="form-check" key={opcion.value}>
+                    <input className="form-check-input" type="radio" name="flexRadioDefault" value={opcion.value} onChange={handleOptionChange} />
+                    <label className="form-check-label">
+                        {opcion.label}
+                    </label>
+                </div>
+            ))}
             </div>
             {alert ? <div className="alert alert-success" role="alert">
                 Respuesta Correcta

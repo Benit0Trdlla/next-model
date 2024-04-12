@@ -2,7 +2,7 @@ import { fetchPreguntas } from "../../app/Administrador/page";
 import { Buttons } from "../../app/components/Buttons";
 import { OpcionsAndAlerts } from "../../app/components/Opcions";
 import Cronometro from '../../app/components/Cronometro';
-
+import Link from "next/link";
 
 export default async function NivelUnoPage({ searchParams }) {
     const preguntas = await fetchPreguntas();
@@ -24,7 +24,7 @@ export default async function NivelUnoPage({ searchParams }) {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
-                                    <a className="btn btn-dark">Volver</a>
+                                    <Link href="./" className="btn btn-dark">Volver</Link>
                                 </li>
                             </ul>
                         </div>
@@ -34,7 +34,9 @@ export default async function NivelUnoPage({ searchParams }) {
                     <hr className="w-75 border-secondary m-0" />
                 </div>
             </header>
-            <Cronometro stateTimer={stateTimer}/>
+            <div>
+                <Cronometro stateTimer={stateTimer}/>
+            </div>
             <div id="inicio">
                 <div className="container mb-5">
                     <div className="row d-flex align-items-center justify-content-center py-1">
@@ -42,10 +44,10 @@ export default async function NivelUnoPage({ searchParams }) {
                             <h6 className="text-center">{pregunta.Enunciado}</h6>
                             {/* <p className="text-danger">IMPORTANTE LA FORMA DE ESCRIBIR LAS OPCIONES Y LA RESPUESTA CORRECTA DEBEN SER LA MISMA. </p> */}
                             <OpcionsAndAlerts justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
-                                { value: pregunta.A },
-                                { value: pregunta.B },
-                                { value: pregunta.C },
-                                { value: pregunta.D }
+                                { label: "A. " + pregunta.A, value: pregunta.A },
+                                { label: "B. " + pregunta.B, value: pregunta.B },
+                                { label: "C. " + pregunta.C, value: pregunta.C },
+                                { label: "D. " + pregunta.D, value: pregunta.D }
                             ]} />
                             {/* <p>Respuesta Correcta: {pregunta.Respuestas}</p> */}
                             {/* <p>{pregunta.Explicación}</p> */}

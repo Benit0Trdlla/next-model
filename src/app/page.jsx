@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import GoTopButton from './components/GoTopButton';
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <header id="header">
         <nav className="navbar navbar-expand-md bg-white">
           <div className="container">
-            <a>
+            <a href='./'>
               <Image src="/14.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -27,7 +28,7 @@ export default function Home() {
                   <a href="#pwa" className="nav-link text-secondary"><small>Agreganos a tu dispositivo</small></a>
                 </li>
                 <li className="nav-item">
-                  <a href="./../login/login.html" className="btn btn-dark"><small>Iniciar</small></a>
+                  <Link href="./niveluno" className="btn btn-dark"><small>Iniciar</small></Link>
                 </li>
               </ul>
             </div>

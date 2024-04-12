@@ -6,13 +6,14 @@ export function Buttons({ totalPreguntas }) {
     const [count, setCount] = useState(0);
     const [stateTimer, setStateTimer] = useState(true);
 
+
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
 
     const params = new URLSearchParams(searchParams);
 
-    // console.log('total preguntas:', totalPreguntas);
+
     const handleNextClick = () => {
         if (count === totalPreguntas - 1) {
             setStateTimer(false)
@@ -39,7 +40,7 @@ export function Buttons({ totalPreguntas }) {
     return (
         <>
             <button type="button" className="btn btn-primary me-4" onClick={handlePrevClick}>Anterior</button>
-            <button type="button" className="btn btn-primary" onClick={handleNextClick} >Siguiente</button>
+            <button type="button" className="btn btn-primary" onClick={handleNextClick} >Siguiente</button> 
         </>
     )
 }
