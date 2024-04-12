@@ -1,27 +1,42 @@
 'use client'
 import { useState, useEffect } from 'react';
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { Buttons } from "../../app/components/Buttons";
 
-
-export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent}) {
+export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent, totalPreguntas}) {
     const [alert, setAlert] = useState(false)
     const [alert2, setAlert2] = useState(false)
-
+    const [ask, setAsk] = useState(false)
+    
+    const searchParams = useSearchParams();
+    const pathname = usePathname();
+    const { replace } = useRouter();
+    const params = new URLSearchParams(searchParams);
+    
     const handleOptionChange = (event) => {
-        const selectedValue = event.target.value;   
+        const selectedValue = event.target.value;
         // agregar a la URL si respondio o no (porejemplo asked=false cuando no respondio y asked=true cuando respondio) y
         //  en el componente de los botones leer la URL y habilitar el boton de siguiente pregunta.
         if (selectedValue === correctAnswer) {
             setAlert(true)
             setAlert2(false)
+            setAsk(true)
         } else {
             setAlert2(true)
             setAlert(false)
+            setAsk(true)
         }
     };
 
     useEffect(() => {
+        params.set('a', ask)
+        replace(`${pathname}?${params.toString()}`)
+    }, [ask, pathname, replace]);
+
+    useEffect(() => {
         setAlert(false)
         setAlert2(false)
+        setAsk(false)
     }, [numIndex]);
 
     return (
@@ -55,6 +70,9 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
                     </div>
                 </div>
             </div>) : null}
+            <div className="d-flex justify-content-center">
+                <Buttons totalPreguntas={totalPreguntas}  ask={ask}/>
+            </div>
         </>
     )
 }

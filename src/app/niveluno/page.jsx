@@ -1,5 +1,5 @@
 import { fetchPreguntas } from "../../app/Administrador/page";
-import { Buttons } from "../../app/components/Buttons";
+// import { Buttons } from "../../app/components/Buttons";
 import { OpcionsAndAlerts } from "../../app/components/Opcions";
 import Cronometro from '../../app/components/Cronometro';
 import Link from "next/link";
@@ -43,7 +43,7 @@ export default async function NivelUnoPage({ searchParams }) {
                         <div className="col-md-6 mt-3">
                             <h6 className="text-center">{pregunta.Enunciado}</h6>
                             {/* <p className="text-danger">IMPORTANTE LA FORMA DE ESCRIBIR LAS OPCIONES Y LA RESPUESTA CORRECTA DEBEN SER LA MISMA. </p> */}
-                            <OpcionsAndAlerts justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
+                            <OpcionsAndAlerts totalPreguntas={totalPreguntas} justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
                                 { label: "A. " + pregunta.A, value: pregunta.A },
                                 { label: "B. " + pregunta.B, value: pregunta.B },
                                 { label: "C. " + pregunta.C, value: pregunta.C },
@@ -51,9 +51,9 @@ export default async function NivelUnoPage({ searchParams }) {
                             ]} />
                             {/* <p>Respuesta Correcta: {pregunta.Respuestas}</p> */}
                             {/* <p>{pregunta.Explicación}</p> */}
-                            <div className="d-flex justify-content-center">
+                            {/* <div className="d-flex justify-content-center">
                                 <Buttons totalPreguntas={totalPreguntas} />
-                            </div>
+                            </div> */}
                         </div>
                         <div className="col-md-6 mt-3">
                             <h1 className="text-center fw-bold fs-1">Álgebra</h1>

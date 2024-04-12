@@ -2,17 +2,16 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-export function Buttons({ totalPreguntas }) {
+export function Buttons({ totalPreguntas, ask }) {
     const [count, setCount] = useState(0);
     const [stateTimer, setStateTimer] = useState(true);
-
+    const [textButton, setTextButton] = useState('Siguiente');
 
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
 
     const params = new URLSearchParams(searchParams);
-
 
     const handleNextClick = () => {
         if (count === totalPreguntas - 1) {
@@ -40,7 +39,7 @@ export function Buttons({ totalPreguntas }) {
     return (
         <>
             <button type="button" className="btn btn-primary me-4" onClick={handlePrevClick}>Anterior</button>
-            <button type="button" className="btn btn-primary" onClick={handleNextClick} >Siguiente</button> 
+            { ask ? <button type="button" className="btn btn-primary" onClick={handleNextClick} >{textButton}</button> : <button type="button" className="btn btn-primary" disabled>{textButton}</button> }
         </>
     )
 }
