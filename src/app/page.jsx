@@ -28,7 +28,7 @@ export default function Home() {
                   <a href="#pwa" className="nav-link text-secondary"><small>Agreganos a tu dispositivo</small></a>
                 </li>
                 <li className="nav-item">
-                  <Link href="./niveluno" className="btn btn-dark"><small>Iniciar</small></Link>
+                  <Link href="./progress" className="btn btn-dark"><small>Iniciar</small></Link>
                 </li>
               </ul>
             </div>
