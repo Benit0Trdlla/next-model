@@ -21,6 +21,7 @@ export default function Cronometro({stateTimer}) {
 
     const minutos = Math.floor(segundos / 60);
     const segundosMostrados = segundos % 60;
+    const Horas = Math.floor(minutos / 60);
 
     // const detenerCronometro = () => {
     //     setCorriendo(false);
@@ -28,7 +29,7 @@ export default function Cronometro({stateTimer}) {
 
     return (
         <div>
-            <p className='text-center'>Tiempo: {minutos} minutos {segundosMostrados} segundos</p>
+            <h4 className='fs-2 text-center text-danger py-3'>{Horas}:{minutos}:{segundosMostrados}</h4>
             {/* <div className='d-flex justify-content-center'>
                 <button className='btn btn-secondary bg-transparent text-black' onClick={detenerCronometro}>Detener Cronómetro</button>
             </div> */}
