@@ -35,11 +35,9 @@ export default function Home() {
           </div>
         </nav>
       </header>
-
       <div className="d-flex justify-content-center">
         <hr className="w-75 border-secondary m-0" />
       </div>
-
       <div className="container text-center mt-5">
         <div className="row d-flex align-items-center justify-content-center">
           <div className="col-md-6 text-center px-4">
@@ -58,8 +56,8 @@ export default function Home() {
             </small>
             </p>
           </div>
-          <div className="col-md-5 row">
-            <img className="img-fluid" src="/mainImage.png" width={50} height={60} alt='Imagen Principal' />
+          <div className="col-md-6 row mt-5">
+            <Image className="img-fluid" src="/ImgHome.png" width={800} height={800} alt='Imagen Principal' />
           </div>
         </div>
       </div>
@@ -115,11 +113,11 @@ export default function Home() {
         </div>
       </section>
       {/* PREGUNTAS FRECUENTES  */}
-      <section id="preguntas" className="p-5">
+      <section id="preguntas" className="p-5 border-top border-bottom">
         <div className="container ">
           <div className="row">
             <div className="col-md-5">
-              <img src="/qanda.png" className="img-fluid" alt="Imagen Preguntas Frecuentes" />
+              <Image src="/ImgPreguntas.png" width={500} height={500} className="img-fluid" alt="Imagen Preguntas Frecuentes" />
             </div>
             <div className="col-md-7 col-lg-7">
               <h2 className="py-4 text-center">Preguntas <span className="text-danger">Frecuentes</span></h2>
@@ -231,7 +229,24 @@ export default function Home() {
             <h2 className="mb-4">Como agregar la aplicación a su dispositivo</h2>
             <hr className="w-24 mx-auto mb-4" />
           </div>
-          <div className="row d-flex align-items-center justify-content-center py-3 mb-5">
+          <div className="row d-flex align-items-center justify-content-center py-2">
+            <div className="col-md-6 text-center">
+              <h6 className='text-primary fw-bold mb-4'>Breve descripción de las PWAs</h6>
+              <p className='fs-6'>
+                <small className='text-justify'>
+                  Las Aplicaciones Web Progresivas (PWA), son aplicaciones web que ofrecen una experiencia similar a una aplicación nativa,
+                  pero se pueden acceder directamente desde un navegador web.
+                  Estas aplicaciones están diseñadas para ser rápidas, confiables y atractivas para el usuario, independientemente del dispositivo
+                  o navegador. Uno de los principales beneficios es que se adaptan a cualquier tipo de dispositivo,
+                  y pueden funcionar incluso en condiciones de conectividad limitada o sin Internet. 
+                  <br />
+                  <br />
+                  Además, las PWAs pueden ser instaladas en el dispositivo del usuario, lo que permite un acceso rápido, sin necesidad de descargar e
+                  instalar desde una tienda de aplicaciones. Siendo una opción atractiva para los usuarios
+                  que buscan una experiencia de aplicación fluida y sin fricciones.
+                </small>
+              </p>
+            </div>
             <div className="col-md-6 text-center mb-5">
               <ol className="list-group list-group-numbered">
                 <li className="list-group-item border-0">Abre Google Chrome.
@@ -243,16 +258,13 @@ export default function Home() {
               </ol>
             </div>
             <div className="col-md-6 d-flex justify-content-center">
-              <div className="col-md-6">
-                <img className="img-fluid" src="https://linube.com/blog/wp-content/uploads/pwa.png" alt='Imagen PWA' />
-              </div>
+                <Image className="img-fluid" src="/ImgPWA.png" width={300} height={300} alt='Imagen PWA' />
             </div>
           </div>
         </div>
       </section>
       {/* Footer  */}
       <GoTopButton />
-
       <footer className="footer mt-auto">
         <section className="bg-light py-4 py-md-5 py-xl-8 border-top">
           <div className="container overflow-hidden">
@@ -260,7 +272,7 @@ export default function Home() {
               <div className="col-12 col-md-4 col-lg-3 col-xl-2">
                 <div className="widget">
                   <a>
-                    <img src="/14.png" width={100} height={100} alt='Logo' />
+                    <Image src="/14.png" width={100} height={100} alt='Logo Proyecto Genius' />
                   </a>
                 </div>
               </div>
@@ -281,19 +293,19 @@ export default function Home() {
                   <h4 className="widget-title mb-4">Materias</h4>
                   <ul className="list-unstyled">
                     <li className="mb-2">
-                      <a href="#!" className="link-secondary text-decoration-none">Matematicas</a>
+                      <a className="link-secondary text-decoration-none">Matematicas</a>
                     </li>
                     <li className="mb-2">
-                      <a href="#!" className="link-secondary text-decoration-none">Linguistica</a>
+                      <a  className="link-secondary text-decoration-none">Linguistica</a>
                     </li>
                     <li className="mb-2">
-                      <a href="#!" className="link-secondary text-decoration-none">Ciencias</a>
+                      <a  className="link-secondary text-decoration-none">Ciencias</a>
                     </li>
                     <li className="mb-2">
-                      <a href="#!" className="link-secondary text-decoration-none">Sociales</a>
+                      <a className="link-secondary text-decoration-none">Sociales</a>
                     </li>
                     <li className="mb-0">
-                      <a href="#!" className="link-secondary text-decoration-none">Ingles</a>
+                      <a className="link-secondary text-decoration-none">Ingles</a>
                     </li>
                   </ul>
                 </div>
