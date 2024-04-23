@@ -8,7 +8,7 @@ export default function Home() {
         <nav className="navbar navbar-expand-md bg-white">
           <div className="container">
             <a href='./'>
-              <Image src="/14.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
+              <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@ export default function Home() {
                   <a href="#instrucciones" className="nav-link text-secondary"><small>Instrucciones</small></a>
                 </li>
                 <li className="nav-item">
-                  <a href="#pwa" className="nav-link text-secondary"><small>Agreganos a tu dispositivo</small></a>
+                  <a href="#donate" className="nav-link text-black"><strong> Haz tu donación</strong></a>
                 </li>
                 <li className="nav-item">
                   <Link href="./progress" className="btn btn-dark"><small>Iniciar</small></Link>
@@ -43,16 +43,16 @@ export default function Home() {
           <div className="col-md-6 text-center px-4">
             <h6 className="fs-3 text-primary fw-bold mb-4"><strong>Proyecto Genius</strong></h6>
             <p className="fs-6"><small>
-              En Caribe Enseña, nos hemos propuesto un objetivo claro: ofrecer un programa virtual de preparación para las
-              pruebas Saber 11 del ICFES, diseñado específicamente para nuestros estudiantes . Nos enfocamos en proporcionar
-              las herramientas necesarias para mejorar habilidades y conocimientos, aumentando así las posibilidades de éxito
-              en estas evaluaciones cruciales para ingresar a la vida universitaria.
+              En <strong>Caribe Enseña</strong>, nos hemos propuesto un objetivo claro: ofrecer un programa virtual de preparación para las pruebas
+              Saber 11 del ICFES, diseñado específicamente para nuestros estudiantes .
+              Nos enfocamos en proporcionar las herramientas necesarias para mejorar habilidades y conocimientos,
+              aumentando así las posibilidades de éxito en estas evaluaciones cruciales para ingresar a la vida universitaria.
               <br />
               <br />
-              Genius es nuestra solución innovadora: una plataforma de aprendizaje virtual que puedes descargar en tus
-              dispositivos móviles, como celulares, computadoras o tabletas. Su accesibilidad offline te permite acceder
-              al material educativo, guías de estudio, ejercicios y exámenes simulados, abarcando las áreas clave evaluadas
-              en las pruebas Saber 11, sin necesidad de una conexión a internet constante.
+              <strong>Genius</strong> es nuestra solución innovadora: una plataforma de aprendizaje virtual que puedes descargar en tus dispositivos móviles,
+              como celulares, computadoras o tabletas. Su accesibilidad offline te permite acceder al material educativo, guías de estudio,
+              ejercicios y exámenes simulados, abarcando las áreas clave evaluadas en las pruebas Saber 11, sin necesidad de una conexión a
+              internet constante.
             </small>
             </p>
           </div>
@@ -71,41 +71,123 @@ export default function Home() {
           <div className="row">
             <div className="col-md-3 mb-3">
               <div className="card">
-                <div className="card-body">
+                <div className="card-body text-center">
                   <i className="fa-regular fa-heart fa-2x my-3"></i>
-                  <h5 className="fw-bold">Love Design</h5>
-                  <p className="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                    facilis nobis voluptatum sequi obcaecati aut minima.</p>
+                  <h5 className="fw-bold">PWA, o Progressive Web App</h5>
+                  <a className="" data-bs-toggle="modal" data-bs-target="#ModalPWA"><strong>Más Información.</strong></a>
+                  {/* Modal */}
+                  <div className="modal fade" id="ModalPWA" aria-labelledby="ModalJustify" aria-hidden="true">
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5 className="modal-title">PWA, o Progressive Web App</h5>
+                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body text-black">
+                          <p className='mt-3'>
+                            <strong>Es básicamente una aplicación web que se ve y se siente como una aplicación que descargas en tu teléfono</strong>,
+                            pero ¡sin necesidad de descargarla! Puedes acceder a ella directamente desde tu navegador web.
+                            Son geniales porque pueden funcionar incluso sin conexión a internet y ofrecen características como
+                            notificaciones instantáneas y un rendimiento rápido. ¡Es como tener lo mejor de ambos mundos!
+                          </p>
+                        </div>
+                        <div className="modal-footer">
+                          <button type="button" className="btn btn-gray border border-dark text-black" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-3 mb-3">
               <div className="card">
-                <div className="card-body">
+                <div className="card-body text-center">
                   <i className="fa-regular fa-eye fa-2x my-3"></i>
-                  <h5 className="fw-bold">Clean UI</h5>
-                  <p className="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                    facilis nobis voluptatum sequi obcaecati aut minima.</p>
+                  <h5 className="fw-bold">Interfaz Intuitiva y Responsive</h5>
+                  <a className="pe-auto" data-bs-toggle="modal" data-bs-target="#ModalInterfaz"><strong>Más Información.</strong></a>
+                  {/* Modal */}
+                  <div className="modal fade" id="ModalInterfaz" aria-labelledby="ModalJustify" aria-hidden="true">
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5 className="modal-title">Interfaz Intuitiva y Responsive</h5>
+                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body text-black">
+                          <p className='mt-3'>
+                            Fácil, accesible e intuitivo describe una plataforma de aprendizaje innovadora.
+                            Con una interfaz amigable, acceso sin problemas desde dispositivos móviles y una navegación intuitiva,
+                            ofrece una experiencia de estudio fluida. Proporciona recursos educativos y herramientas de evaluación que
+                            mejoran el aprendizaje de los estudiantes, sin complicaciones.
+                          </p>
+                        </div>
+                        <div className="modal-footer">
+                          <button type="button" className="btn btn-gray border border-dark text-black" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-3 mb-3">
               <div className="card">
-                <div className="card-body">
+                <div className="card-body text-center">
                   <i className="fas fa-mobile-screen fa-2x my-3"></i>
-                  <h5 className="fw-bold">Responsive</h5>
-                  <p className="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                    facilis nobis voluptatum sequi obcaecati aut minima.</p>
+                  <h5 className="fw-bold">Más de 2000 Preguntas Adaptadas</h5>
+                  <a className="" data-bs-toggle="modal" data-bs-target="#ModalPreguntasAdaptadas"><strong>Más Información.</strong></a>
+                  {/* Modal */}
+                  <div className="modal fade" id="ModalPreguntasAdaptadas" aria-labelledby="ModalJustify" aria-hidden="true">
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5 className="modal-title">Más de 2000 Preguntas Adaptadas</h5>
+                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body text-black">
+                          <p className='mt-3'>
+                            Descubre una amplia gama de más de 2000 preguntas y 200 contenidos temáticos diseñados para abordar
+                            las competencias y niveles de desempeño de Saber 11. Prepárate de manera integral para superar con éxito
+                            cada área evaluada y alcanzar tus metas académicas con nuestra plataforma.
+                          </p>
+                        </div>
+                        <div className="modal-footer">
+                          <button type="button" className="btn btn-gray border border-dark text-black" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-3 mb-3">
               <div className="card">
-                <div className="card-body">
+                <div className="card-body text-center">
                   <i className="fa-regular fa-object-group fa-2x my-3"></i>
-                  <h5 className="fw-bold">Simple UX</h5>
-                  <p className="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                    facilis nobis voluptatum sequi obcaecati aut minima.</p>
+                  <h5 className="fw-bold">Simulacro de Prueba Saber 11</h5>
+                  <a className="" data-bs-toggle="modal" data-bs-target="#ModalSimulacroPruebaSaber"><strong>Más Información.</strong></a>
+                  {/* Modal */}
+                  <div className="modal fade" id="ModalSimulacroPruebaSaber" aria-labelledby="ModalJustify" aria-hidden="true">
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <h5 className="modal-title">Simulacro de Prueba Saber 11</h5>
+                          <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body text-black">
+                          <p className='mt-3'>
+                            Sumérgete en la experiencia de un simulacro cronometrado de la Prueba Saber 11.
+                            Descarga nuestro contenido especialmente diseñado para ofrecerte una práctica realista y completa.
+                            Domina cada pregunta Saber 11 y prepárate para alcanzar tus metas académicas con confianza.
+                          </p>
+                        </div>
+                        <div className="modal-footer">
+                          <button type="button" className="btn btn-gray border border-dark text-black" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -116,8 +198,10 @@ export default function Home() {
       <section id="preguntas" className="p-5 border-top border-bottom">
         <div className="container ">
           <div className="row">
-            <div className="col-md-5">
-              <Image src="/ImgPreguntas.png" width={500} height={500} className="img-fluid" alt="Imagen Preguntas Frecuentes" />
+            <div className="col-md-5 d-flex align-items-center">
+              <div className='d-flex justify-content-center'>
+                <Image src="/ImgPreguntas.png" width={500} height={500} className="img-fluid" alt="Imagen Preguntas Frecuentes" />
+              </div>
             </div>
             <div className="col-md-7 col-lg-7">
               <h2 className="py-4 text-center">Preguntas <span className="text-danger">Frecuentes</span></h2>
@@ -126,42 +210,118 @@ export default function Home() {
                   <h2 className="accordion-header" id="flush-headingOne">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      PreguntaNumeroUno
+                      ¿Qué es Genius?
                     </button>
                   </h2>
                   <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
-                    <div className="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, totam!
-                      Provident sint nihil velit impedit modi autem eaque culpa facere omnis, odio quos minima architecto
-                      officiis enim, ducimus perferendis blanditiis!</div>
+                    <div className="accordion-body">
+                      Genius es una plataforma educativa gratuita y de acceso universal que ofrece una variedad de recursos para el
+                      aprendizaje y entrenamiento de las pruebas saber 11, teniendo en cuenta las áreas evaluadas por el ICFES:
+                      <strong>
+                        razonamiento lógico, comprensión lectora, biología, ciencias sociales e inglés.
+                      </strong>
+                    </div>
                   </div>
                 </div>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="flush-headingTwo">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      PreguntaNumeroDos
+                      ¿Cuáles son las características y beneficios de Genius?
                     </button>
                   </h2>
                   <div id="flush-collapseTwo" className="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                     data-bs-parent="#accordionFlushExample">
-                    <div className="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, totam!
-                      Provident sint nihil velit impedit modi autem eaque culpa facere omnis, odio quos minima architecto
-                      officiis enim, ducimus perferendis blanditiis!</div>
+                    <div className="accordion-body">
+                      - <strong>Acceso gratuito</strong>: Genius es completamente gratuita para todos los usuarios.
+                      <br />
+                      - <strong>Flexibilidad</strong>: Puedes aprender a tu propio ritmo y desde cualquier lugar sin conexión a internet.
+                      <br />
+                      - <strong>Variedad de contenido</strong>: Ofrece una amplia gama de contenido y preguntas para el entrenamiento de las pruebas saber 11.
+                      <br />
+                      - <strong>Progreso</strong>: Puedes ver tu progreso por cada nivel.
+                    </div>
                   </div>
                 </div>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="flush-headingThree">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      PreguntaNumeroTres
+                      ¿Cómo puedo usar Genius?
                     </button>
                   </h2>
                   <div id="flush-collapseThree" className="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
-                    <div className="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, totam!
-                      Provident sint nihil velit impedit modi autem eaque culpa facere omnis, odio quos minima architecto
-                      officiis enim, ducimus perferendis blanditiis!
+                    <div className="accordion-body">
+                      Simplemente haz clic en la opción &apos;Iniciar&apos; y selecciona el área de tu interés, ya sea <strong>
+                        razonamiento lógico, comprensión lectora, biología, ciencias sociales o inglés.
+                      </strong>
+                      Comienza a responder las preguntas y tendrás acceso a contenido relacionado con el temario.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingFour">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      ¿Cómo puedo crear una cuenta?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" className="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div className="accordion-body">
+                      No es necesario crear una cuenta para utilizar Genius, ya que es completamente <strong>gratuita y de acceso universal.</strong>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingFive">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      Si hay alguna pregunta o contenido equivocado, ¿cómo puedo contactarlos?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" className="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div className="accordion-body">
+                      Si encuentras alguna pregunta incorrecta o tienes alguna duda, contáctanos a través del correo electrónico <strong>soporte@proyectogenius.org</strong>. Estaremos encantados de ayudarte.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingSix">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      ¿Qué más puedo hacer en Genius?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" className="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample">
+                    <div className="accordion-body">
+                      Además de los recursos mencionados, en Genius puedes:
+                      <br />
+                      - Entrenar junto a tus compañeros de clases.
+                      <br />
+                      - Descargar en PDF la prueba simulacro.
+                      <br />
+                      - Ganar insignias y recompensas por tu progreso
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingSeven">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      ¿Cómo agregar la aplicación a su dispositivo?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSeven" className="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+                    data-bs-parent="#accordionFlushExample">
+                    <div className="accordion-body">
+                      Vete al botón menú de Google (el de los tres puntos).
+                      Selecciona la opción de <strong>Añadir a pantalla de inicio.</strong>
+                      Selecciona el nombre con el que quieres enviarla.
                     </div>
                   </div>
                 </div>
@@ -174,26 +334,29 @@ export default function Home() {
       <section id="instrucciones" className="py-5 bg-white">
         <div className='container'>
           <h2 className="text-center fs-4 text-secondary-emphasis fw-bold mb-4">Conoce las Instrucciones de: </h2>
-          <div className="row d-flex align-items-center justify-content-center py-3 mb-5">
-            <div className="col-md-6 text-center mb-5">
+          <div className="row mb-5 mt-5">
+            <div className="col-md-6 text-center">
               <h6 className="fs-4 text-primary fw-bold mb-4"><strong>Proyecto Genius</strong></h6>
-              <p><small>
-                El Examen de Estado de la Educación Media, conocido como Saber 11°, es una evaluación estandarizada que se aplica en Colombia para medir la calidad de la educación media. El examen está compuesto por cinco áreas: Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés1.
+              <p className="fs-6"><small>
+                En <strong>Caribe Enseña</strong>, nos hemos propuesto un objetivo claro: ofrecer un programa virtual de preparación para las pruebas
+                Saber 11 del ICFES, diseñado específicamente para nuestros estudiantes .
+                Nos enfocamos en proporcionar las herramientas necesarias para mejorar habilidades y conocimientos,
+                aumentando así las posibilidades de éxito en estas evaluaciones cruciales para ingresar a la vida universitaria.
                 <br />
-                Desde el año 2021, el ICFES publica un nuevo reporte de resultados para el examen Saber 11, con el fin de ofrecer una interpretación más completa de los resultados. Este reporte incluye el puntaje global, los percentiles, guías de interpretación, y para cada área evaluada, el nivel de desempeño del estudiante junto con las habilidades y destrezas que representa2.
                 <br />
-                Para más detalles sobre orientarte en la prueba, saber los niveles de desempeño y cómo interpretar los resultados y utilizarlos, puedes consultar la guía proporcionada por el ICFES, <strong>descargala aquī.</strong>
-              </small></p>
-              <ol className="list-group list-group-numbered">
-                <li className="list-group-item border-0">Ver documento en linea</li>
-                <li className="list-group-item border-0">Enlace a descargar</li>
-              </ol>
+                <strong>Genius</strong> es nuestra solución innovadora: una plataforma de aprendizaje virtual que puedes descargar en tus dispositivos móviles,
+                como celulares, computadoras o tabletas. Su accesibilidad offline te permite acceder al material educativo, guías de estudio,
+                ejercicios y exámenes simulados, abarcando las áreas clave evaluadas en las pruebas Saber 11, sin necesidad de una conexión a
+                internet constante.
+              </small>
+              </p>
             </div>
             <div className="col-md-6 text-center">
               <h6 className="fs-4 text-primary fw-bold mb-4"><strong>Pruebas SABER 11</strong></h6>
               <p>
                 <small>
-                  El Examen de Estado de la Educación Media, conocido como Saber 11°, es una evaluación estandarizada que se aplica en Colombia para medir la calidad de la educación media. El examen está compuesto por cinco áreas: Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés1.
+                  El Examen de Estado de la Educación Media, conocido como Saber 11°, es una evaluación estandarizada que se aplica en Colombia para medir la calidad de la educación media. El examen está compuesto por cinco áreas: Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés.
+                  <br />
                   <br />
                   Desde el año 2021, el ICFES publica un nuevo reporte de resultados para el examen Saber 11, con el fin de ofrecer una interpretación más completa de los resultados. Este reporte incluye el puntaje global, los percentiles, guías de interpretación, y para cada área evaluada, el nivel de desempeño del estudiante junto con las habilidades y destrezas que representa2.
                   <br />
@@ -201,8 +364,9 @@ export default function Home() {
                 </small>
               </p>
               <ol className="list-group list-group-numbered">
-                <li className="list-group-item border-0">Enlace a descargar</li>
-                <li className="list-group-item border-0">Ver documento en linea</li>
+                <li className="list-group-item border-0">Descargar Niveles de Desempeño</li>
+                <li className="list-group-item border-0">Descargar Guia de Orientación</li>
+                <li className="list-group-item border-0">Descargar Infografías</li>
               </ol>
               <div className="dropdown mt-2">
                 <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -211,10 +375,13 @@ export default function Home() {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="/GuiadeOrientaciónSaber.pdf" download="GuiadeOrientaciónSaber.pdf">Descargar archivo</a>
+                    <a className="dropdown-item" href="/NivelesdeDesempeño.zip" download="NivelesdeDesempeño.zip">Descargar Niveles de Desempeño</a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="https://drive.google.com/file/d/1G2VqxDbKQXSmOOumr0c8RX_N94a6vdcT/view">Ver archivo en línea</a>
+                    <a className="dropdown-item" href="/GuiadeOrientaciónSaber.pdf" download={"GuiadeOrientaciónSaber.pdf"}>Descargar Guia de Orientación</a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/Infografias.zip" download={"Infografias.zip"}>Descargar Infografías</a>
                   </li>
                 </ul>
               </div>
@@ -222,43 +389,33 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* INSTRUCCIONES PWA  */}
-      <section id="pwa" className="py-5">
+      {/* DONACIONES  */}
+      <section id="donate" className="py-5">
         <div className="container">
           <div className="text-center">
-            <h2 className="mb-4">Como agregar la aplicación a su dispositivo</h2>
+            <h2 className="text-primary  mb-4">¡Haz Click y Sé el Cambio! Apoya la Educación en el Caribe Colombiano</h2>
             <hr className="w-24 mx-auto mb-4" />
           </div>
           <div className="row d-flex align-items-center justify-content-center py-2">
             <div className="col-md-6 text-center">
-              <h6 className='text-primary fw-bold mb-4'>Breve descripción de las PWAs</h6>
               <p className='fs-6'>
                 <small className='text-justify'>
-                  Las Aplicaciones Web Progresivas (PWA), son aplicaciones web que ofrecen una experiencia similar a una aplicación nativa,
-                  pero se pueden acceder directamente desde un navegador web.
-                  Estas aplicaciones están diseñadas para ser rápidas, confiables y atractivas para el usuario, independientemente del dispositivo
-                  o navegador. Uno de los principales beneficios es que se adaptan a cualquier tipo de dispositivo,
-                  y pueden funcionar incluso en condiciones de conectividad limitada o sin Internet. 
+                  ¿Quieres ser parte del cambio? <strong>Caribe Enseña y el proyecto Genius</strong>, estamos comprometidos a brindar oportunidades a
+                  estudiantes rurales en todo el Caribe colombiano.
                   <br />
                   <br />
-                  Además, las PWAs pueden ser instaladas en el dispositivo del usuario, lo que permite un acceso rápido, sin necesidad de descargar e
-                  instalar desde una tienda de aplicaciones. Siendo una opción atractiva para los usuarios
-                  que buscan una experiencia de aplicación fluida y sin fricciones.
+                  <strong>¿Cómo puedes ayudar?</strong> <br />
+                  ¡Con tu generosa donación! Al contribuir con nuestro proyecto, estás abriendo las puertas de la educación superior
+                  para jóvenes talentosos que merecen brillar. ¡Únete a nuestra causa y sé el héroe que transforma vidas!
+                  Haz click aquí para donar ahora. para mayot información: donaciones@proyectogenius.org  (poner botón de donaciones)
                 </small>
               </p>
-            </div>
-            <div className="col-md-6 text-center mb-5">
-              <ol className="list-group list-group-numbered">
-                <li className="list-group-item border-0">Abre Google Chrome.
-                </li>
-                <li className="list-group-item border-0">Introduce la dirección web de la página que quieres usar como PWA.</li>
-                <li className="list-group-item border-0">Vete al botón menú de Google (el de los tres puntos)</li>
-                <li className="list-group-item border-0">Selecciona la opción de Añadir a pantalla de inicio.</li>
-                <li className="list-group-item border-0">Selecciona el nombre con el que quieres enviarla.</li>
-              </ol>
+              <button className='btn btn-info'>
+                <a className='text-black link-underline-info' href="https://www.paypal.com/paypalme/caribeensena?country.x=CO&locale.x=es_XC" target="_blank">Haz tu aporte aqui.</a>
+              </button>
             </div>
             <div className="col-md-6 d-flex justify-content-center">
-                <Image className="img-fluid" src="/ImgPWA.png" width={300} height={300} alt='Imagen PWA' />
+              <Image className="img-fluid" src="/ImgPWA.png" width={500} height={500} alt='Imagen PWA' />
             </div>
           </div>
         </div>
@@ -271,42 +428,30 @@ export default function Home() {
             <div className="row gy-4 gy-lg-0 justify-content-xl-between">
               <div className="col-12 col-md-4 col-lg-3 col-xl-2">
                 <div className="widget">
-                  <a>
-                    <Image src="/14.png" width={100} height={100} alt='Logo Proyecto Genius' />
-                  </a>
+                  <div className='d-flex justify-content-center align-items-center'>
+                    <Image src="/ImgLogoFooter.png" width={180} height={180} alt='Logo Proyecto Genius' />
+                  </div>
                 </div>
               </div>
               <div className="col-12 col-md-4 col-lg-3 col-xl-2">
                 <div className="widget">
-                  <h4 className="widget-title mb-4">Proyecto Genius</h4>
-                  <address className="mb-4">Caribe Enseña</address>
-                  <p className="mb-1">
-                    <a className="link-secondary text-decoration-none" href="tel:+">(000) 123-4567</a>
-                  </p>
+                  <h4 className="widget-title mb-4">Un proyecto de:</h4>
+                  <address className="mb-4">Fundación Caribe Enseña</address>
                   <p className="mb-0">
                     <a className="link-secondary text-decoration-none" href="mailto:">@caribeensena.org</a>
                   </p>
                 </div>
               </div>
-              <div className="col-12 col-md-4 col-lg-3 col-xl-2">
+              <div className="col-12 col-md-4 col-lg-3">
                 <div className="widget">
-                  <h4 className="widget-title mb-4">Materias</h4>
+                  <h4 className="widget-title mb-4">Contactanos</h4>
                   <ul className="list-unstyled">
-                    <li className="mb-2">
-                      <a className="link-secondary text-decoration-none">Matematicas</a>
-                    </li>
-                    <li className="mb-2">
-                      <a  className="link-secondary text-decoration-none">Linguistica</a>
-                    </li>
-                    <li className="mb-2">
-                      <a  className="link-secondary text-decoration-none">Ciencias</a>
-                    </li>
-                    <li className="mb-2">
-                      <a className="link-secondary text-decoration-none">Sociales</a>
-                    </li>
-                    <li className="mb-0">
-                      <a className="link-secondary text-decoration-none">Ingles</a>
-                    </li>
+                    <p className="mb-0 mt-4">
+                      <a className="link-secondary text-decoration-none" href="mailto:">soporte@proyectogenius.org</a>
+                    </p>
+                    <p className="mb-0 mt-4">
+                      <a className="link-secondary text-decoration-none" href="mailto:">equipo@proyectogenius.org</a>
+                    </p>
                   </ul>
                 </div>
               </div>

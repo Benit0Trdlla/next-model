@@ -27,7 +27,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center">Matemáticas</h5>
                         </div>
-                        <Image src="/ImgMatemática.png" width={300} height={300} className="card-img-top" alt="Imagen Matemáticas" />
+                        <Image src="/ImgMatemática.png" width={300} height={350} className="card-img-top" alt="Imagen Matemáticas" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./niveluno" className="btn bg-transparent border-0">
                                 <Image src="/unlocked.webp" width={25} height={25} className="card-img-top" alt="Imagen Matemáticas" />
@@ -47,7 +47,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center ">Lectura Critica</h5>
                         </div>
-                        <Image src="/ImgLengua.png" width={300} height={300} className="card-img-top" alt="Imagen Lectura Critica" />
+                        <Image src="/ImgLengua.png" width={300} height={350} className="card-img-top" alt="Imagen Lectura Critica" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Matemáticas" />
@@ -67,7 +67,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center">Sociales y ciudadanas</h5>
                         </div>
-                        <Image width={300} height={300} src="/ImgSociales.png" className="card-img-top" alt="Sociales y ciudadanas" />
+                        <Image width={300} height={350} src="/ImgSociales.png" className="card-img-top" alt="Sociales y ciudadanas" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Matemáticas" />
@@ -87,7 +87,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center">Ciencias naturales</h5>
                         </div>
-                        <Image width={300} height={300} src="/ImgCncNa.png" className="card-img-top" alt="Ciencias naturales" />
+                        <Image width={300} height={350} src="/ImgCncNa.png" className="card-img-top" alt="Ciencias naturales" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Matemáticas" />
@@ -107,7 +107,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center">Inglés</h5>
                         </div>
-                        <Image width={300} height={300} src="/ImgIngles.png" className="card-img-top" alt="Imagen Inglés" />
+                        <Image width={300} height={350} src="/ImgIngles.png" className="card-img-top" alt="Imagen Inglés" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Matemáticas" />
@@ -126,7 +126,7 @@ export default function ProgressPage() {
                 </div>
             </div>
             <div className="mt-5 px-2 fst-italic text-secondary">
-                <p className="fs-3 text-center estilo-letra">
+                <p className="fs-3 text-center">
                     Estas son las áreas que vas a explorar, subdivididas por 4 niveles.
                     <br />
                     ¡El aprendizaje con diversión va empezar!

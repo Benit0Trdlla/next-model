@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/14.png"/>
+        <link rel="shortcut icon" href="/ImgLogoPestaña.png"/>
       </head>
       <body className={inter.className}>
         <InstallBootstrap />
