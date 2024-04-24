@@ -7,7 +7,7 @@ export default function ProgressPage() {
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
                         <a href='./'>
-                            <Image src="/14.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
+                            <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
                         </a>
                         <ul className="navbar-nav ms-auto gap-3">
                             <li className="nav-item">

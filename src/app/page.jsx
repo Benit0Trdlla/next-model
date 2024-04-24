@@ -390,7 +390,7 @@ export default function Home() {
         </div>
       </section>
       {/* DONACIONES  */}
-      <section id="donate" className="py-5">
+      <section id="donate" className="py-4">
         <div className="container">
           <div className="text-center">
             <h2 className="text-primary  mb-4">¡Haz Click y Sé el Cambio! Apoya la Educación en el Caribe Colombiano</h2>
@@ -400,22 +400,22 @@ export default function Home() {
             <div className="col-md-6 text-center">
               <p className='fs-6'>
                 <small className='text-justify'>
-                  ¿Quieres ser parte del cambio? <strong>Caribe Enseña y el proyecto Genius</strong>, estamos comprometidos a brindar oportunidades a
+                  ¿Quieres ser parte del cambio? <strong>Caribe Enseña y proyecto Genius</strong> estan comprometidos a brindar oportunidades a
                   estudiantes rurales en todo el Caribe colombiano.
                   <br />
                   <br />
                   <strong>¿Cómo puedes ayudar?</strong> <br />
                   ¡Con tu generosa donación! Al contribuir con nuestro proyecto, estás abriendo las puertas de la educación superior
                   para jóvenes talentosos que merecen brillar. ¡Únete a nuestra causa y sé el héroe que transforma vidas!
-                  Haz click aquí para donar ahora. para mayot información: donaciones@proyectogenius.org  (poner botón de donaciones)
+                  Para mayor información: <strong>donaciones@proyectogenius.org</strong>
                 </small>
               </p>
               <button className='btn btn-info'>
                 <a className='text-black link-underline-info' href="https://www.paypal.com/paypalme/caribeensena?country.x=CO&locale.x=es_XC" target="_blank">Haz tu aporte aqui.</a>
               </button>
             </div>
-            <div className="col-md-6 d-flex justify-content-center">
-              <Image className="img-fluid" src="/ImgPWA.png" width={500} height={500} alt='Imagen PWA' />
+            <div className="col-md-6 d-flex justify-content-center py-4">
+              <Image className="img-fluid" src="/ImgCaribeEnseña.webp" width={300} height={300} alt='Logotipo de Caribe Enseña' />
             </div>
           </div>
         </div>
