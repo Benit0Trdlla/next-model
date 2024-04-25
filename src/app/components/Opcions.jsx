@@ -44,7 +44,7 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
             <div className='mb-4 ms-4'>
             {opciones.map((opcion) => (
                 <div className="form-check" key={opcion.value}>
-                    <input className="form-check-input" type="radio" name="flexRadioDefault" value={opcion.value} onChange={handleOptionChange} />
+                    <input className="form-check-input border border-secondary border-2" type="radio" name="flexRadioDefault" value={opcion.value} onChange={handleOptionChange} />
                     <label className="form-check-label">
                         {opcion.label}
                     </label>
