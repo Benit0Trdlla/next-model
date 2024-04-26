@@ -8,7 +8,7 @@ export default function Home() {
         <nav className="navbar navbar-expand-md bg-white">
           <div className="container">
             <a href='./'>
-              <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
+              <Image src="/ImgLogoNav.png" width={70} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>
@@ -410,12 +410,13 @@ export default function Home() {
                   Para mayor información: <strong>donaciones@proyectogenius.org</strong>
                 </small>
               </p>
-              <button className='btn btn-info'>
-                <a className='text-black link-underline-info' href="https://www.paypal.com/paypalme/caribeensena?country.x=CO&locale.x=es_XC" target="_blank">Haz tu aporte aqui.</a>
+              <button className='btn btn-warning'>
+                <a className='text-black link-underline-warning' href="https://www.paypal.com/paypalme/caribeensena?country.x=CO&locale.x=es_XC" target="_blank"><strong>¡Haz tu donación aqui!</strong></a>
               </button>
             </div>
             <div className="col-md-6 d-flex justify-content-center py-4">
-              <Image className="img-fluid" src="/ImgCaribeEnseña.webp" width={300} height={300} alt='Logotipo de Caribe Enseña' />
+              <Image className="img-fluid" src="/ImgCaribeEnseña.webp" width={200} height={200} alt='Logotipo de Caribe Enseña' />
+              <Image className="img-fluid" src="/ImgLogoFooter.png" width={200} height={200} alt='Logo Proyecto Genius' />
             </div>
           </div>
         </div>
@@ -429,34 +430,34 @@ export default function Home() {
               <div className="col-12 col-md-4 col-lg-3 col-xl-2">
                 <div className="widget">
                   <div className='d-flex justify-content-center align-items-center'>
-                    <Image src="/ImgLogoFooter.png" width={180} height={180} alt='Logo Proyecto Genius' />
+                    <Image src="/ImgLogoFooter.png" width={120} height={120} alt='Logo Proyecto Genius' />
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-md-4 col-lg-3 col-xl-2">
-                <div className="widget">
-                  <h4 className="widget-title mb-4">Un proyecto de:</h4>
-                  <address className="mb-4">Fundación Caribe Enseña</address>
-                  <p className="mb-0">
-                    <a className="link-secondary text-decoration-none" href="mailto:">@caribeensena.org</a>
-                  </p>
+                <div className="col-12 col-md-4 col-lg-3">
+                  <div className="widget">
+                    <h4 className="widget-title">Un proyecto de Fundación Caribe Enseña</h4>
+                    {/* <address className="mb-4">Fundación Caribe Enseña</address> */}
+                    <p className="mb-0">
+                      <a className="link-secondary text-decoration-none" href="mailto:">@caribeensena.org</a>
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-12 col-md-4 col-lg-3">
-                <div className="widget">
-                  <h4 className="widget-title mb-4">Contactanos</h4>
-                  <ul className="list-unstyled">
-                    <p className="mb-0 mt-4">
-                      <a className="link-secondary text-decoration-none" href="mailto:">soporte@proyectogenius.org</a>
-                    </p>
-                    <p className="mb-0 mt-4">
-                      <a className="link-secondary text-decoration-none" href="mailto:">equipo@proyectogenius.org</a>
-                    </p>
-                  </ul>
+                <div className="col-12 col-md-4 col-lg-3">
+                  <div className="widget">
+                    <h4 className="widget-title mb-4">Contactanos</h4>
+                    <ul className="list-unstyled">
+                      <p className="mb-0 mt-4">
+                        <a className="link-secondary text-decoration-none" href="mailto:">soporte@proyectogenius.org</a>
+                      </p>
+                      <p className="mb-0 mt-2">
+                        <a className="link-secondary text-decoration-none" href="mailto:">equipo@proyectogenius.org</a>
+                      </p>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </section>
         <div className="bg-light py-4 py-md-5 py-xl-8 border-top border-light-subtle">
           <div className="container overflow-hidden">

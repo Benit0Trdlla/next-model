@@ -52,7 +52,7 @@ export default async function NivelUnoPage({ searchParams }) {
                                 {/* {pregunta.Imagen && <img src={pregunta.Imagen} className="img-fluid" alt="" />} */}
                                 <div className="d-flex justify-content-center">
                                     {pregunta.Imagen && (
-                                        <img src={pregunta.Imagen} className="img-fluid" alt="" />
+                                        <img src={pregunta.Imagen} className="img-fluid" alt="Imagen de ayuda para el contenido teorico" />
                                     )}
                                 </div>
                             </div>
