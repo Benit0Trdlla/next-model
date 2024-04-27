@@ -8,7 +8,7 @@ export default function Home() {
         <nav className="navbar navbar-expand-md bg-white">
           <div className="container">
             <a href='./'>
-              <Image src="/ImgLogoNav.png" width={70} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
+              <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{width: "auto"}} priority={true}/>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@ export default function Home() {
                   <a href="#donate" className="nav-link text-black"><strong> Haz tu donación</strong></a>
                 </li>
                 <li className="nav-item">
-                  <Link href="./progress" className="btn btn-dark"><small>Iniciar</small></Link>
+                  <Link href="./ingresar" className="btn btn-dark"><small>Iniciar</small></Link>
                 </li>
               </ul>
             </div>
@@ -57,7 +57,7 @@ export default function Home() {
             </p>
           </div>
           <div className="col-md-6 row mt-5">
-            <Image className="img-fluid" src="/ImgHome.png" width={800} height={800} alt='Imagen Principal' />
+            <Image className="img-fluid" src="/ImgHome.png" width={800} height={800} alt='Imagen Principal' priority={true} />
           </div>
         </div>
       </div>
