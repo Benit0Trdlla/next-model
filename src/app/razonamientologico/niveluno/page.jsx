@@ -18,7 +18,7 @@ export default async function NivelUnoPage({ searchParams }) {
             <header id="header">
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
-                        <a className="navbar-brand fs-2 text-black">Matematica</a>
+                        <a className="navbar-brand fs-2 text-black">Razonamiento Lógico</a>
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
                                 <Link href="/progress" className="btn btn-dark">Volver</Link>
