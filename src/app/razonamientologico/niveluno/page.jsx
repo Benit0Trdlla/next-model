@@ -1,11 +1,11 @@
-import { fetchPreguntas } from "../../app/Administrador/page";
+import { fetchPreguntasAndTeoria } from "../../lib/data";
 // import { Buttons } from "../../app/components/Buttons";
-import { OpcionsAndAlerts } from "../../app/components/Opcions";
-import Cronometro from '../../app/components/Cronometro';
+import { OpcionsAndAlerts } from "../../components/Opcions";
+import Cronometro from '../../components/Cronometro';
 import Link from "next/link";
 
 export default async function NivelUnoPage({ searchParams }) {
-    const preguntas = await fetchPreguntas();
+    const preguntas = await fetchPreguntasAndTeoria("https://docs.google.com/spreadsheets/d/e/2PACX-1vSuLH4t-YFmRI5phxbxvBEo9uRQaRP-P70Kpoa3PT7ZwRPWmiJdEwduLz5bKkSBWxGQV2ynDHHWIpYJ/pub?output=csv");
 
     const stateTimer = searchParams?.state;
     const numIndex = searchParams?.index;
@@ -89,15 +89,16 @@ export default async function NivelUnoPage({ searchParams }) {
                 </Link>
                 <div className="d-flex justify-content-center">
                     <div className="d-flex justify-content-center">
-                        <button id="levelLockButton1" type="button" className="btn btn-secondary me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lock" viewBox="0 0 16 16">
+                        <Link id="levelLockButton1" href="./niveluno" type="button" className="btn btn-secondary me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lock" viewBox="0 0 16 16">
                             <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
                         </svg>
-                        </button>
+                        </Link>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <button id="levelLockButton2" type="button" className="btn btn-secondary me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lock" viewBox="0 0 16 16">
+                        <Link id="levelLockButton2" href="./niveldos" type="button" className="btn btn-secondary me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lock" viewBox="0 0 16 16">
                             <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
-                        </svg></button>
+                        </svg>
+                        </Link>
                     </div>
                     <div className="d-flex justify-content-center">
                         <button id="levelLockButton3" type="button" className="btn btn-secondary me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lock" viewBox="0 0 16 16">
@@ -105,7 +106,7 @@ export default async function NivelUnoPage({ searchParams }) {
                         </svg></button>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <Link id="levelLockButton4" href="./" type="button" className="btn btn-secondary me-2">
+                        <Link id="levelLockButton4" href="../" type="button" className="btn btn-secondary me-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-lock" viewBox="0 0 16 16">
                                 <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
                             </svg>

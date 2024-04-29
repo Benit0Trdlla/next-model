@@ -29,10 +29,10 @@ export default function ProgressPage() {
                         </div>
                         <Image src="/ImgMatemática.png" width={300} height={350} className="card-img-top" alt="Imagen Matemáticas" />
                         <div className="d-flex justify-content-between align-items-center">
-                            <Link href="./niveluno" className="btn bg-transparent border-0">
+                            <Link href="./razonamientologico/niveluno" className="btn bg-transparent border-0">
                                 <Image src="/unlocked.webp" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
                             </Link>
-                            <Link href="./progress" className="btn  bg-transparent border-0">
+                            <Link href="./razonamientologico/niveldos" className="btn  bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 2" />
                             </Link>
                             <Link href="./progress" className="btn bg-transparent border-0">
@@ -49,7 +49,7 @@ export default function ProgressPage() {
                         </div>
                         <Image src="/ImgLengua.png" width={300} height={350} className="card-img-top" alt="Imagen Lectura Critica" />
                         <div className="d-flex justify-content-between align-items-center">
-                            <Link href="./progress" className="btn bg-transparent border-0">
+                            <Link href="./lecturacritica/niveluno" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
                             </Link>
                             <Link href="./progress" className="btn  bg-transparent border-0">

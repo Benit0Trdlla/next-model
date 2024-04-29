@@ -415,8 +415,7 @@ export default function Home() {
               </button>
             </div>
             <div className="col-md-6 d-flex justify-content-center py-4">
-              <Image className="img-fluid" src="/ImgCaribeEnseña.webp" width={200} height={200} alt='Logotipo de Caribe Enseña' />
-              <Image className="img-fluid" src="/ImgLogoFooter.png" width={200} height={200} alt='Logo Proyecto Genius' />
+              <Image className="img-fluid" src="/ImgDonaciones.png" width={250} height={250} alt='Imagen de donaciones' />
             </div>
           </div>
         </div>
