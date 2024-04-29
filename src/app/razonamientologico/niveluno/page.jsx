@@ -1,8 +1,10 @@
 import { fetchPreguntasAndTeoria } from "../../lib/data";
-// import { Buttons } from "../../app/components/Buttons";
 import { OpcionsAndAlerts } from "../../components/Opcions";
 import Cronometro from '../../components/Cronometro';
+import Header from "@/app/components/Header";
+import TheoreticalContent from "@/app/components/TheoreticalContent";
 import Link from "next/link";
+
 
 export default async function NivelUnoPage({ searchParams }) {
     const preguntas = await fetchPreguntasAndTeoria("https://docs.google.com/spreadsheets/d/e/2PACX-1vSuLH4t-YFmRI5phxbxvBEo9uRQaRP-P70Kpoa3PT7ZwRPWmiJdEwduLz5bKkSBWxGQV2ynDHHWIpYJ/pub?output=csv");
@@ -15,24 +17,8 @@ export default async function NivelUnoPage({ searchParams }) {
 
     return (
         <>
-            <header id="header">
-                <nav className="navbar navbar-expand-md bg-white">
-                    <div className="container">
-                        <a className="navbar-brand fs-2 text-black">Razonamiento Lógico</a>
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <Link href="/progress" className="btn btn-dark">Volver</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div className="d-flex justify-content-center">
-                    <hr className="w-75 border-secondary m-0" />
-                </div>
-            </header>
-            <div>
-                <Cronometro stateTimer={stateTimer} />
-            </div>
+            <Header titleSubject={"Razonamiento Lógico"} href={"/progress"}/>
+            <Cronometro stateTimer={stateTimer} />
             <div id="inicio">
                 <div className="container mb-5">
                     <div className="row d-flex align-items-center justify-content-center py-1">
@@ -46,42 +32,14 @@ export default async function NivelUnoPage({ searchParams }) {
                             ]} />
                         </div>
                         <div className="col-md-6">
-                            <h1 className="text-center fw-bold fs-1">{pregunta.Titulo}</h1>
-                            <div className="overflow-auto" style={{ maxHeight: '400px' }}>
-                                <p className="me-2 mt-3" dangerouslySetInnerHTML={{ __html: formattedText }}></p>
-                                {/* {pregunta.Imagen && <img src={pregunta.Imagen} className="img-fluid" alt="" />} */}
-                                <div className="d-flex justify-content-center">
-                                    {pregunta.Imagen && (
-                                        <img src={pregunta.Imagen} className="img-fluid" alt="Imagen de ayuda para el contenido teorico" />
-                                    )}
-                                </div>
-                            </div>
-                            <style>
-                                {`
-                                    /* Estilos para la barra de desplazamiento */
-                                    .overflow-auto::-webkit-scrollbar {
-                                        width: 8px;
-                                    }
-
-                                    /* Estilos para el thumb de la barra de desplazamiento */
-                                    .overflow-auto::-webkit-scrollbar-thumb {
-                                        background-color: #888;
-                                        border-radius: 4px;
-                                    }
-
-                                    /* Estilos para el thumb de la barra de desplazamiento al pasar el cursor */
-                                    .overflow-auto::-webkit-scrollbar-thumb:hover {
-                                        background-color: #555;
-                                    }
-                                `}
-                            </style>
+                            <TheoreticalContent {...pregunta} Teoria={formattedText}/>
                         </div>
                     </div>
                 </div>
             </div>
             {/* BOTONES DE NIVELES (HACERLO COMO COMPONENTE)  */}
             <div className="d-flex justify-content-around align-items-center mt-5 mb-3 me-2 ms-2">
-                <Link href="./progress" className="btn btn-danger">
+                <Link href="/progress" className="btn btn-danger">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-left" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                         <path fillRule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />

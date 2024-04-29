@@ -1,22 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Header from "@/app/components/Header";
+
 export default function ProgressPage() {
     return (
         <>
-            <header id="header">
-                <nav className="navbar navbar-expand-md bg-white">
-                    <div className="container">
-                        <a href='./'>
-                            <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" />
-                        </a>
-                        <ul className="navbar-nav ms-auto gap-3">
-                            <li className="nav-item">
-                                <Link href="./" className="btn btn-primary"><small>Volver</small></Link>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+            <Header MyImage={"/ImgLogoNav.png"} href={"/ingresar"}/>
             <div className="d-flex justify-content-center">
                 <hr className="w-75 border-secondary m-0" />
             </div>

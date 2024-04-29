@@ -1,21 +1,10 @@
 import Image from 'next/image'
+import Header from "@/app/components/Header";
+
 export default function IngresarPage() {
     return (
-        <div>
-            <header id="header">
-                <nav className="navbar navbar-expand-md bg-white">
-                    <div className="container">
-                        <a href="./">
-                            <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
-                        </a>
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a href="/" className="btn btn-dark">Inicio</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+        <>
+            <Header MyImage={"/ImgLogoNav.png"} href={"./"}/>
             <div className="d-flex justify-content-center">
                 <hr className="w-75 border-secondary m-0" />
             </div>
@@ -70,6 +59,6 @@ export default function IngresarPage() {
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     )
 }
