@@ -3,6 +3,8 @@ import { OpcionsAndAlerts } from "../../components/Opcions";
 import Cronometro from '../../components/Cronometro';
 import Header from "@/app/components/Header";
 import TheoreticalContent from "@/app/components/TheoreticalContent";
+import Enunciado from "@/app/components/Enunciado";
+import { StructureActivities, ContentActivities } from "@/app/components/Activities";
 import Link from "next/link";
 
 export default async function NivelUnoPage({ searchParams }) {
@@ -16,26 +18,20 @@ export default async function NivelUnoPage({ searchParams }) {
 
     return (
         <>
-            <Header titleSubject={"Lectura Crítica"} href={"/progress"}/>
+            <Header titleSubject={"Lectura Crítica"} href={"/progress"} />
             <Cronometro stateTimer={stateTimer} />
-            <div id="inicio">
-                <div className="container mb-5">
-                    <div className="row d-flex align-items-center justify-content-center py-1">
-                        <div className="col-md-6 mt-3 mb-5">
-                            <h6 className="text-center">{pregunta.Enunciado}</h6>
-                            <OpcionsAndAlerts totalPreguntas={totalPreguntas} justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
-                                { label: "A. " + pregunta.A, value: pregunta.A },
-                                { label: "B. " + pregunta.B, value: pregunta.B },
-                                { label: "C. " + pregunta.C, value: pregunta.C },
-                                { label: "D. " + pregunta.D, value: pregunta.D }
-                            ]} />
-                        </div>
-                        <div className="col-md-6">
-                            <TheoreticalContent {...pregunta} Teoria={formattedText}/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <StructureActivities>
+                <ContentActivities>
+                    <Enunciado Enunciado={pregunta.Enunciado} />
+                    <OpcionsAndAlerts totalPreguntas={totalPreguntas} justifyContent={pregunta.Explicación} numIndex={numIndex} correctAnswer={pregunta.Respuestas} opciones={[
+                        { label: "A. " + pregunta.A, value: pregunta.A },
+                        { label: "B. " + pregunta.B, value: pregunta.B },
+                        { label: "C. " + pregunta.C, value: pregunta.C },
+                        { label: "D. " + pregunta.D, value: pregunta.D }
+                    ]} />
+                    <TheoreticalContent {...pregunta} Teoria={formattedText} />
+                </ContentActivities>
+            </StructureActivities>
             {/* BOTONES DE NIVELES (HACERLO COMO COMPONENTE)  */}
             <div className="d-flex justify-content-around align-items-center mt-5 mb-3 me-2 ms-2">
                 <Link href="/progress" className="btn btn-danger">
@@ -70,7 +66,7 @@ export default async function NivelUnoPage({ searchParams }) {
                         </button>
                     </div>
                 </div>
-                <button href="./" className="btn btn-primary" disabled>
+                <button href="./" className="btn btn-primary" disabled={stateTimer === undefined}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
                     </svg>
