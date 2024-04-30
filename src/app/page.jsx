@@ -8,7 +8,7 @@ export default function Home() {
         <nav className="navbar navbar-expand-md bg-white">
           <div className="container">
             <a href='./'>
-              <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{width: "auto"}} priority={true}/>
+              <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>
@@ -86,9 +86,7 @@ export default function Home() {
                         <div className="modal-body text-black">
                           <p className='mt-3'>
                             <strong>Es básicamente una aplicación web que se ve y se siente como una aplicación que descargas en tu teléfono</strong>,
-                            pero ¡sin necesidad de descargarla! Puedes acceder a ella directamente desde tu navegador web.
-                            Son geniales porque pueden funcionar incluso sin conexión a internet y ofrecen características como
-                            notificaciones instantáneas y un rendimiento rápido. ¡Es como tener lo mejor de ambos mundos!
+                            Puedes acceder a ella directamente desde tu navegador web...
                           </p>
                         </div>
                         <div className="modal-footer">
@@ -200,7 +198,7 @@ export default function Home() {
           <div className="row">
             <div className="col-md-5 d-flex align-items-center">
               <div className='d-flex justify-content-center'>
-                <Image src="/ImgPreguntas.png" width={500} height={500} className="img-fluid" alt="Imagen Preguntas Frecuentes" />
+                <Image src="/ImgPreguntas.png" width={500} height={500} className="img-fluid w-100 h-100" alt="Imagen Preguntas Frecuentes" />
               </div>
             </div>
             <div className="col-md-7 col-lg-7">
@@ -217,10 +215,7 @@ export default function Home() {
                     data-bs-parent="#accordionFlushExample">
                     <div className="accordion-body">
                       Genius es una plataforma educativa gratuita y de acceso universal que ofrece una variedad de recursos para el
-                      aprendizaje y entrenamiento de las pruebas saber 11, teniendo en cuenta las áreas evaluadas por el ICFES:
-                      <strong>
-                        razonamiento lógico, comprensión lectora, biología, ciencias sociales e inglés.
-                      </strong>
+                      aprendizaje y entrenamiento de las pruebas saber 11, teniendo en cuenta las áreas evaluadas por el ICFES: <strong>razonamiento lógico, comprensión lectora, biología, ciencias sociales e inglés.</strong>
                     </div>
                   </div>
                 </div>
@@ -325,6 +320,38 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingHeight">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseHeight" aria-expanded="false" aria-controls="flush-collapseHeight">
+                      ¿Tú institución educativa está interesada en utilizar nuestra plataforma Genius?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseHeight" className="accordion-collapse collapse" aria-labelledby="flush-headingHeight"
+                    data-bs-parent="#accordionFlushExample">
+                    <div className="accordion-body">
+                    Si eres una institución educativa interesada en acceder a nuestro servicio de plataforma, 
+                    contáctanos en <strong>equipo@proyectogenius.org</strong>. Un miembro de nuestro equipo se comunicará contigo para facilitar 
+                    el proceso necesario y garantizar el acceso de tus alumnos.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingNine">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                      ¿Eres un estudiante interesado en utilizar nuestra plataforma?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseNine" className="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                    data-bs-parent="#accordionFlushExample">
+                    <div className="accordion-body">
+                    Por razones logísticas, estamos estableciendo convenios con instituciones educativas para ofrecer nuestro servicio 
+                    a su estudiantado. Si eres parte de una escuela, podemos realizar el convenio con tu institución educativa. 
+                    Por favor, comunícanoslo a través del correo <strong>equipo@proyectogenius.org.</strong>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -335,21 +362,25 @@ export default function Home() {
         <div className='container'>
           <h2 className="text-center fs-4 text-secondary-emphasis fw-bold mb-4">Conoce las Instrucciones de: </h2>
           <div className="row mb-5 mt-5">
-            <div className="col-md-6 text-center">
-              <h6 className="fs-4 text-primary fw-bold mb-4"><strong>Proyecto Genius</strong></h6>
-              <p className="fs-6"><small>
-                En <strong>Caribe Enseña</strong>, nos hemos propuesto un objetivo claro: ofrecer un programa virtual de preparación para las pruebas
-                Saber 11 del ICFES, diseñado específicamente para nuestros estudiantes .
-                Nos enfocamos en proporcionar las herramientas necesarias para mejorar habilidades y conocimientos,
-                aumentando así las posibilidades de éxito en estas evaluaciones cruciales para ingresar a la vida universitaria.
-                <br />
-                <br />
-                <strong>Genius</strong> es nuestra solución innovadora: una plataforma de aprendizaje virtual que puedes descargar en tus dispositivos móviles,
-                como celulares, computadoras o tabletas. Su accesibilidad offline te permite acceder al material educativo, guías de estudio,
-                ejercicios y exámenes simulados, abarcando las áreas clave evaluadas en las pruebas Saber 11, sin necesidad de una conexión a
-                internet constante.
-              </small>
-              </p>
+            <div className="col-md-6">
+              <h6 className="fs-4 text-primary fw-bold mb-2"><strong>Cómo Usar Genius Sin Necesidad de Internet</strong></h6>
+              <h6 className="fs-6 text-primary fw-bold mb-2 text-center"><strong>Sigue estos pasos:</strong></h6>
+                  <strong className='text-center'>Instalar la PWA desde Chrome</strong>:
+                  <ul className="list-group ">
+                    <li className="list-group-item border border-0">* En la barra de direcciones de Chrome, busca el ícono de opciones (tres puntos verticales) ubicado en la esquina superior derecha de la ventana del navegador.</li>
+                    <li className="list-group-item border border-0">* En el menú, busca y selecciona la opción &quot;Instalar proyectogenius.org&quot; o &quot;Instalar esta aplicación&quot;.</li>
+                    <li className="list-group-item border border-0">* Si la PWA es compatible, verás una ventana emergente que te permite instalar la aplicación en tu dispositivo.</li>
+                  </ul>
+                  <strong className='text-center'>Completa la instalación</strong>:
+                  <ul className="list-group ">
+                    <li className="list-group-item border border-0">* Después de hacer clic en &quot;Instalar&quot;, se te pedirá que confirmes la instalación.</li>
+                    <li className="list-group-item border border-0">* La aplicación se agregará a tu lista de aplicaciones instaladas en Chrome y en tu dispositivo.</li>
+                  </ul>
+                  <strong className='text-center'>Accede a la aplicación web progresiva instalada</strong>:
+                  <ul className="list-group mb-4">
+                    <li className="list-group-item border border-0">* Una vez instalada, podrás acceder a la aplicación web progresiva desde tu dispositivo como una aplicación independiente.</li>
+                    <li className="list-group-item border border-0">* En Chrome, puedes encontrar la PWA en la sección de aplicaciones al hacer clic en el menú de aplicaciones del navegador.</li>
+                  </ul>
             </div>
             <div className="col-md-6 text-center">
               <h6 className="fs-4 text-primary fw-bold mb-4"><strong>Pruebas SABER 11</strong></h6>
@@ -433,30 +464,33 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-                <div className="col-12 col-md-4 col-lg-3">
-                  <div className="widget">
-                    <h4 className="widget-title">Un proyecto de Fundación Caribe Enseña</h4>
-                    {/* <address className="mb-4">Fundación Caribe Enseña</address> */}
-                    <p className="mb-0">
-                      <a className="link-secondary text-decoration-none" href="mailto:">@caribeensena.org</a>
-                    </p>
-                  </div>
+              <div className="col-12 col-md-4 col-lg-3">
+                <div className="widget">
+                  <h4 className="widget-title">Un proyecto de Fundación Caribe Enseña</h4>
+                  {/* <address className="mb-4">Fundación Caribe Enseña</address> */}
+                  <p className="mb-0">
+                    <a className="link-secondary text-decoration-none text-primary" href="mailto:">@caribeensena.org</a>
+                  </p>
                 </div>
-                <div className="col-12 col-md-4 col-lg-3">
-                  <div className="widget">
-                    <h4 className="widget-title mb-4">Contactanos</h4>
-                    <ul className="list-unstyled">
-                      <p className="mb-0 mt-4">
-                        <a className="link-secondary text-decoration-none" href="mailto:">soporte@proyectogenius.org</a>
-                      </p>
-                      <p className="mb-0 mt-2">
-                        <a className="link-secondary text-decoration-none" href="mailto:">equipo@proyectogenius.org</a>
-                      </p>
-                    </ul>
-                  </div>
+              </div>
+              <div className="col-12 col-md-4 col-lg-3">
+                <div className="widget">
+                  <h4 className="widget-title mb-2">Contactanos</h4>
+                  <ul className="list-unstyled">
+                    <p className="mb-0 mt-2">
+                      <a className="link-secondary text-decoration-none text-primary" href="mailto:">genius@caribeensena.org</a>
+                    </p>
+                    <p className="mb-0 mt-2">
+                      <a className="link-secondary text-decoration-none text-primary" href="mailto:">equipo@proyectogenius.org</a>
+                    </p>
+                    <p className="mb-0 mt-2">
+                      <a className="link-secondary text-decoration-none text-primary" href="mailto:">soporte@proyectogenius.org</a>
+                    </p>
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
         </section>
         <div className="bg-light py-4 py-md-5 py-xl-8 border-top border-light-subtle">
           <div className="container overflow-hidden">

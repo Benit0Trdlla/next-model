@@ -16,7 +16,9 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center text-black">Razonamiento lógico</h5>
                         </div>
-                        <Image src="/ImgMatemática.png" width={300} height={350} className="card-img-top" alt="Imagen Matemáticas" />
+                        <a href="./razonamientologico">
+                            <Image src="/ImgMatemática.png" width={400} height={400} className="card-img-top w-100 h-100" alt="Imagen Matemáticas" />
+                        </a>
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./razonamientologico/niveluno" className="btn bg-transparent border-0">
                                 <Image src="/unlocked.webp" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
@@ -36,7 +38,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center text-black">Lectura Critica</h5>
                         </div>
-                        <Image src="/ImgLengua.png" width={300} height={350} className="card-img-top" alt="Imagen Lectura Critica" />
+                        <Image src="/ImgLengua.png" width={400} height={400} className='card-img-top w-100 h-100' alt="Imagen Lectura Critica" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./lecturacritica/niveluno" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
@@ -56,7 +58,9 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center text-black">Sociales y ciudadanas</h5>
                         </div>
-                        <Image width={300} height={350} src="/ImgSociales.png" className="card-img-top" alt="Sociales y ciudadanas" />
+                        <a href="/">
+                            <Image width={400} height={400} src="/ImgSociales.png" className='card-img-top w-100 h-100' alt="Sociales y ciudadanas" />
+                        </a>
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
@@ -76,7 +80,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center text-black">Ciencias naturales</h5>
                         </div>
-                        <Image width={300} height={350} src="/ImgCncNa.png" className="card-img-top" alt="Ciencias naturales" />
+                        <Image width={400} height={400} src="/ImgCncNa.png" className='card-img-top w-100 h-100' alt="Ciencias naturales" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
@@ -96,7 +100,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center text-black">Inglés</h5>
                         </div>
-                        <Image width={300} height={350} src="/ImgIngles.png" className="card-img-top" alt="Imagen Inglés" />
+                        <Image width={400} height={400} src="/ImgIngles.png" className='card-img-top w-100 h-100' alt="Imagen Inglés" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
