@@ -82,7 +82,7 @@ export default function Home() {
       </CardServicesList>
       {/* PREGUNTAS FRECUENTES  */}
       <PreguntasFrecuentesLista MyImage={"/ImgPreguntas.png"}>
-        <PreguntasFrecuentes flushheading={"flush-headingOne"} flushcollapse={"flush-collapseOne"} title={"¿Qué es Genesis?"}>
+        <PreguntasFrecuentes flushheading={"flush-headingOne"} flushcollapse={"flush-collapseOne"} title={"¿Qué es Genius?"}>
           Genius es una plataforma educativa gratuita y de acceso universal que ofrece una variedad de recursos para el
           aprendizaje y entrenamiento de las pruebas saber 11, teniendo en cuenta las áreas evaluadas por el ICFES: <strong>razonamiento lógico, comprensión lectora, biología, ciencias sociales e inglés.</strong>
         </PreguntasFrecuentes>

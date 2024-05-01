@@ -6,7 +6,7 @@ export default function Enunciado({ Enunciado }) {
         <>
             <h6 className="text-center">
                 {isImageUrl(Enunciado) ? (
-                    <img src={Enunciado} alt="Enunciado" />
+                    <img src={Enunciado} style={{ maxWidth: '100%', height: 'auto' }} alt="Imagen como Enunciado de la actividad a responder" />
                 ) : (
                     <p>{Enunciado}</p>
                 )}
