@@ -80,7 +80,7 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center text-black">Ciencias naturales</h5>
                         </div>
-                        <Image width={400} height={400} src="/ImgCncNa.png" className='card-img-top w-100 h-100' alt="Ciencias naturales" />
+                        <Image width={400} height={400} src="/ImgNaturales.png" className='card-img-top w-100 h-100' alt="Ciencias naturales" />
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./progress" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />
