@@ -1,46 +1,13 @@
 import Image from 'next/image'
-import Link from 'next/link';
 import GoTopButton from './components/GoTopButton';
 import { PreguntasFrecuentesLista, PreguntasFrecuentes } from './components/PreguntasFrecuentes';
 import { CardServicesList, Cards } from './components/CardServices';
 import { Footer, SubFooter, NavItemSubFooter } from './components/Footer';
+import {HeaderHomePage} from './components/Header';
 export default function Home() {
   return (
     <>
-      <header id="header">
-        <nav className="navbar navbar-expand-md bg-white">
-          <div className="container">
-            <a href='./'>
-              <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
-            </a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-auto gap-3">
-                <li className="nav-item">
-                  <a href="#services" className="nav-link text-secondary"><small>Servicios</small></a>
-                </li>
-                <li className="nav-item">
-                  <a href="#preguntas" className="nav-link text-secondary"><small>Preguntas Frecuentes</small></a>
-                </li>
-                <li className="nav-item">
-                  <a href="#instrucciones" className="nav-link text-secondary"><small>Instrucciones</small></a>
-                </li>
-                <li className="nav-item">
-                  <a href="#donate" className="nav-link text-black"><strong> Haz tu donación</strong></a>
-                </li>
-                <li className="nav-item">
-                  <Link href="./ingresar" className="btn btn-dark"><small>Iniciar</small></Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div className="d-flex justify-content-center">
-        <hr className="w-75 border-secondary m-0" />
-      </div>
+      <HeaderHomePage/>
       <div className="container text-center mt-5">
         <div className="row d-flex align-items-center justify-content-center">
           <div className="col-md-6 text-center px-4">
@@ -138,28 +105,27 @@ export default function Home() {
           <h2 className="text-center fs-4 text-secondary-emphasis fw-bold mb-4">Conoce las Instrucciones de: </h2>
           <div className="row mb-5 mt-5">
             <div className="col-md-6 text-center">
-              <h6 className="fs-4 text-primary fw-bold mb-2"><strong>Cómo Usar Genius Sin Necesidad de Internet</strong></h6>
-              <h6 className="fs-6 text-primary fw-bold mb-2 text-center"><strong>Sigue estos pasos:</strong></h6>
-              <strong className='text-center'>Instalar la PWA desde Chrome</strong>:
+              <h6 className="fs-4 text-primary fw-bold mb-2 "><strong>Cómo Usar Genius Sin Necesidad de Internet</strong></h6>
+              <h6 className="fs-6 text-primary fw-bold mb-2 "><strong>Sigue estos pasos:</strong></h6>
+              <strong >Instalar la PWA desde Chrome</strong>:
               <ul>
                 <li >En la barra de direcciones de Chrome, busca el ícono de opciones (tres puntos verticales) ubicado en la esquina superior derecha de la ventana del navegador.</li>
                 <li >En el menú, busca y selecciona la opción &quot;Instalar proyectogenius.org&quot; o &quot;Instalar esta aplicación&quot;.</li>
                 <li >Si la PWA es compatible, verás una ventana emergente que te permite instalar la aplicación en tu dispositivo.</li>
               </ul>
-              <strong className='text-center'>Completa la instalación</strong>:
+              <strong >Completa la instalación</strong>:
               <ul >
                 <li >Después de hacer clic en &quot;Instalar&quot;, se te pedirá que confirmes la instalación.</li>
                 <li >La aplicación se agregará a tu lista de aplicaciones instaladas en Chrome y en tu dispositivo.</li>
               </ul>
-              <strong className='text-center'>Accede a la aplicación web progresiva instalada</strong>:
+              <strong >Accede a la aplicación web progresiva instalada</strong>:
               <ul className="mb-4">
                 <li >Una vez instalada, podrás acceder a la aplicación web progresiva desde tu dispositivo como una aplicación independiente.</li>
                 <li >En Chrome, puedes encontrar la PWA en la sección de aplicaciones al hacer clic en el menú de aplicaciones del navegador.</li>
               </ul>
             </div>
             <div className="col-md-6 text-center">
-              <h6 className="fs-4 text-primary fw-bold mb-4"><strong>Pruebas SABER 11</strong></h6>
-              <p>
+              <h6 className="fs-4 text-primary fw-bold mb-5"><strong>Pruebas SABER 11</strong></h6>
                 <small>
                   El Examen de Estado de la Educación Media, conocido como Saber 11°, es una evaluación estandarizada que se aplica en Colombia para medir la calidad de la educación media. El examen está compuesto por cinco áreas: Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés.
                   <br />
@@ -168,7 +134,6 @@ export default function Home() {
                   <br />
                   Para más detalles sobre orientarte en la prueba, saber los niveles de desempeño y cómo interpretar los resultados y utilizarlos, puedes consultar la guía proporcionada por el ICFES, <strong>descargala aquī.</strong>
                 </small>
-              </p>
               <ol className="list-group list-group-numbered">
                 <li className="list-group-item border-0">Descargar Niveles de Desempeño</li>
                 <li className="list-group-item border-0">Descargar Guia de Orientación</li>
