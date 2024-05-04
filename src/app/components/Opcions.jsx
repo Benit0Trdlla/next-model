@@ -3,18 +3,23 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { Buttons } from "../../app/components/Buttons";
 
-export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent, totalPreguntas}) {
+export default function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent, totalPreguntas }) {
     const [alert, setAlert] = useState(false)
     const [alert2, setAlert2] = useState(false)
     const [ask, setAsk] = useState(false)
-    
+
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
     const params = new URLSearchParams(searchParams);
-    
+
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
+        // Obtener las respuestas anteriores del localStorage
+        const previousAnswers = JSON.parse(localStorage.getItem('answers')) || {};
+        // Guardar la respuesta del usuario en el localStorage
+        previousAnswers[numIndex] = selectedValue;
+        localStorage.setItem('answers', JSON.stringify(previousAnswers));
         // agregar a la URL si respondio o no (porejemplo asked=false cuando no respondio y asked=true cuando respondio) y
         //  en el componente de los botones leer la URL y habilitar el boton de siguiente pregunta.
         if (selectedValue === correctAnswer) {
@@ -42,14 +47,14 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
     return (
         <>
             <div className='mb-4 ms-4'>
-            {opciones.map((opcion) => (
-                <div className="form-check" key={opcion.value}>
-                    <input className="form-check-input border border-secondary border-2" type="radio" name="flexRadioDefault" value={opcion.value} onChange={handleOptionChange} />
-                    <label className="form-check-label">
-                        {opcion.label}
-                    </label>
-                </div>
-            ))}
+                {opciones.map((opcion) => (
+                    <div className="form-check" key={opcion.value}>
+                        <input className="form-check-input border border-secondary border-2" type="radio" name="flexRadioDefault" value={opcion.value} onChange={handleOptionChange} />
+                        <label className="form-check-label">
+                            {opcion.label}
+                        </label>
+                    </div>
+                ))}
             </div>
             {alert ? <div className="alert alert-success" role="alert">
                 Respuesta Correcta
@@ -71,7 +76,7 @@ export function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyCon
                 </div>
             </div>) : null}
             <div className="d-flex justify-content-center">
-                <Buttons totalPreguntas={totalPreguntas}  ask={ask}/>
+                <Buttons totalPreguntas={totalPreguntas} ask={ask} />
             </div>
         </>
     )

@@ -1,5 +1,5 @@
 import { fetchPreguntasAndTeoria } from "../../lib/data";
-import { OpcionsAndAlerts } from "../../components/Opcions";
+import OpcionsAndAlerts from "../../components/Opcions";
 import Cronometro from '../../components/Cronometro';
 import Header from "@/app/components/Header";
 import TheoreticalContent from "@/app/components/TheoreticalContent";

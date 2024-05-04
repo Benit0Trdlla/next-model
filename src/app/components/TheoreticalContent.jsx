@@ -4,9 +4,19 @@ export default function TheoreticalContent({ Titulo, Teoria, Imagen }) {
             <h1 className="text-center fw-bold fs-1">{Titulo}</h1>
             <div className="overflow-auto" style={{ maxHeight: '400px' }}>
                 <p className="me-2 mt-3" dangerouslySetInnerHTML={{ __html: Teoria }}></p>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex flex-column align-items-center">
                     {Imagen && (
-                        <img src={Imagen} className="img-fluid" style={{ maxWidth: '100%', height: 'auto' }} alt="Imagen de ayuda para el contenido teorico" />
+                        <>
+                            {Imagen.split(',').map((url, index) => (
+                                <div key={index} className="mb-3">
+                                    <img src={url.trim()} // Eliminar espacios en blanco alrededor de la URL
+                                        className="img-fluid"
+                                        // style={{ maxWidth: '450px', height: '150px' }}
+                                        alt={`Imagen ${index + 1} de ayuda para el contenido teorico`}
+                                    />
+                                </div>
+                            ))}
+                        </>
                     )}
                 </div>
             </div>
