@@ -7,10 +7,9 @@ import Enunciado from "@/app/components/Enunciado";
 import { StructureActivities, ContentActivities } from "@/app/components/Activities";
 import Link from "next/link";
 
-
 export default async function NivelUnoPage({ searchParams }) {
     const preguntas = await fetchPreguntasAndTeoria("https://docs.google.com/spreadsheets/d/e/2PACX-1vSuLH4t-YFmRI5phxbxvBEo9uRQaRP-P70Kpoa3PT7ZwRPWmiJdEwduLz5bKkSBWxGQV2ynDHHWIpYJ/pub?output=csv");
-
+    
     const stateTimer = searchParams?.state;
     const numIndex = searchParams?.index;
     const totalPreguntas = preguntas.length;

@@ -1,6 +1,6 @@
 'use client'
-import { useState, useEffect } from 'react';
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { useState, useEffect} from 'react';
+// import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { Buttons } from "../../app/components/Buttons";
 
 export default function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, justifyContent, totalPreguntas }) {
@@ -8,10 +8,11 @@ export default function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, ju
     const [alert2, setAlert2] = useState(false)
     const [ask, setAsk] = useState(false)
 
-    const searchParams = useSearchParams();
-    const pathname = usePathname();
-    const { replace } = useRouter();
-    const params = new URLSearchParams(searchParams);
+    // const searchParams = useSearchParams();
+    // const pathname = usePathname();
+    // const { replace } = useRouter();
+    // const params = new URLSearchParams(searchParams);
+    // const params = useMemo(() => new URLSearchParams(searchParams), [searchParams]);
 
     const handleOptionChange = (event) => {
         const selectedValue = event.target.value;
@@ -20,23 +21,15 @@ export default function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, ju
         // Guardar la respuesta del usuario en el localStorage
         previousAnswers[numIndex] = selectedValue;
         localStorage.setItem('answers', JSON.stringify(previousAnswers));
-        // agregar a la URL si respondio o no (porejemplo asked=false cuando no respondio y asked=true cuando respondio) y
-        //  en el componente de los botones leer la URL y habilitar el boton de siguiente pregunta.
-        if (selectedValue === correctAnswer) {
-            setAlert(true)
-            setAlert2(false)
-            setAsk(true)
-        } else {
-            setAlert2(true)
-            setAlert(false)
-            setAsk(true)
-        }
+        if (selectedValue === correctAnswer) setAlert(true)
+        else setAlert2(true)
+        setAsk(true)
     };
 
-    useEffect(() => {
-        params.set('a', ask)
-        replace(`${pathname}?${params.toString()}`)
-    }, [ask, pathname, replace]);
+    // useEffect(() => {
+    //     params.set('a', ask)
+    //     replace(`${pathname}?${params.toString()}`)
+    // }, [ask, pathname, replace]);
 
     useEffect(() => {
         setAlert(false)
@@ -75,9 +68,7 @@ export default function OpcionsAndAlerts({ opciones, correctAnswer, numIndex, ju
                     </div>
                 </div>
             </div>) : null}
-            <div className="d-flex justify-content-center">
-                <Buttons totalPreguntas={totalPreguntas} ask={ask} />
-            </div>
+            <Buttons totalPreguntas={totalPreguntas} ask={ask} />
         </>
     )
 }

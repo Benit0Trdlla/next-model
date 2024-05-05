@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
 export function Buttons({ totalPreguntas, ask }) {
@@ -10,17 +10,14 @@ export function Buttons({ totalPreguntas, ask }) {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
-
-    const params = new URLSearchParams(searchParams);
+    const params = useMemo(() => new URLSearchParams(searchParams), [searchParams]);
 
     const handleNextClick = () => {
         if (count === totalPreguntas - 1) {
-            setStateTimer(false)
-            return
+            return setStateTimer(false)
         }
         setCount(count => count + 1);
     }
-
     const handlePrevClick = () => {
         if (count === 0) return
         setCount(count => count - 1);
@@ -29,17 +26,16 @@ export function Buttons({ totalPreguntas, ask }) {
     useEffect(() => {
         params.set('index', count)
         replace(`${pathname}?${params.toString()}`)
-    }, [count, pathname, replace]);
-
+    }, [count, pathname, replace, params]);
     useEffect(() => {
         params.set('state', stateTimer)
         replace(`${pathname}?${params.toString()}`)
-    }, [stateTimer, pathname, replace])
+    }, [stateTimer, pathname, replace, params]);
 
     return (
-        <>
+        <div className='d-flex justify-content-center'>
             <button type="button" className="btn btn-primary me-4" onClick={handlePrevClick}>Anterior</button>
-            { ask ? <button type="button" className="btn btn-primary" onClick={handleNextClick} >{textButton}</button> : <button type="button" className="btn btn-primary" disabled>{textButton}</button> }
-        </>
+            <button type="button" className="btn btn-primary" onClick={handleNextClick} disabled={!ask}>{textButton}</button>
+        </div>
     )
 }
