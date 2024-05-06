@@ -6,4 +6,3 @@ export const fetchPreguntasAndTeoria = async (url) => {
     const jsonData = parse(csvData, { header: true });
     return jsonData.data;
 }
-
