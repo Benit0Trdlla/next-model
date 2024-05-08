@@ -38,7 +38,9 @@ export default function ProgressPage() {
                         <div className="card-body">
                             <h5 className="card-title text-center text-black">Lectura Critica</h5>
                         </div>
-                        <Image src="/ImgLengua.png" width={400} height={400} className='card-img-top w-100 h-100' alt="Imagen Lectura Critica" />
+                        <a href="/lecturacritica">
+                            <Image src="/ImgLengua.png" width={400} height={400} className='card-img-top w-100 h-100' alt="Imagen Lectura Critica" />
+                        </a>
                         <div className="d-flex justify-content-between align-items-center">
                             <Link href="./lecturacritica/niveluno" className="btn bg-transparent border-0">
                                 <Image src="/locked.png" width={25} height={25} className="card-img-top" alt="Imagen Nivel 1" />

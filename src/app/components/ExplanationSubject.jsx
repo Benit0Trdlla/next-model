@@ -12,7 +12,7 @@ export function Row({ children, subTitle, subTitleTwo, href }) {
     return (
         <>
             <div className="row mt-5 py-2">
-                <div className="col-md-6 text-center">
+                <div className="col-md-6 text-center mb-4">
                     <h4>{subTitle}</h4>
                     {children[0]}
                 </div>
