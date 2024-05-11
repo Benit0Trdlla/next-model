@@ -14,7 +14,7 @@ export default function Header({ titleSubject, MyImage, href }) {
                         )}
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <Link href={href} className="btn btn-dark">Volver</Link>
+                                <Link href={href} className="btn btn-warning">Volver</Link>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@ export function HeaderHomePage() {
                                     <a href="#donate" className="nav-link text-black"><strong> Haz tu donación</strong></a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="./ingresar" className="btn btn-dark"><small>Iniciar</small></a>
+                                    <a href="./ingresar" className="btn btn-warning"><small>Iniciar</small></a>
                                 </li>
                             </ul>
                         </div>

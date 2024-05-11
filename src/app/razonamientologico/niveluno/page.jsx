@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default async function NivelUnoPage({ searchParams }) {
     const preguntas = await fetchPreguntasAndTeoria("https://docs.google.com/spreadsheets/d/e/2PACX-1vSuLH4t-YFmRI5phxbxvBEo9uRQaRP-P70Kpoa3PT7ZwRPWmiJdEwduLz5bKkSBWxGQV2ynDHHWIpYJ/pub?output=csv");
-    
+
     const stateTimer = searchParams?.state;
     const numIndex = searchParams?.index;
     const totalPreguntas = preguntas.length;
@@ -66,11 +66,11 @@ export default async function NivelUnoPage({ searchParams }) {
                         </Link>
                     </div>
                 </div>
-                <button href="./" className="btn btn-primary" disabled={stateTimer === undefined}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                    </svg>
-                </button>
+                <Link href={stateTimer === "false" ? "/razonamientologico/niveldos" : "#"} className="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                </Link>
             </div>
         </>
     )
