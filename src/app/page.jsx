@@ -4,6 +4,7 @@ import { PreguntasFrecuentesLista, PreguntasFrecuentes } from './components/Preg
 import { CardServicesList, Cards } from './components/CardServices';
 import { Footer, SubFooter, NavItemSubFooter } from './components/Footer';
 import { HeaderHomePage } from './components/Header';
+
 export default function Home() {
   return (
     <>

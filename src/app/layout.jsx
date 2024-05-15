@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import InstallBootstrap from "./components/InstallBootstrap";
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/ImgLogoPestaña.png"/>
+        <link rel="shortcut icon" href="/ImgLogoPestaña.png" />
       </head>
       <body className={inter.className}>
-        <InstallBootstrap />
-        {children}
+        <UserProvider>
+          <InstallBootstrap />
+          {children}
+        </UserProvider>
       </body>
     </html>
   );

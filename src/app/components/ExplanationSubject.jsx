@@ -12,12 +12,12 @@ export function Row({ children, subTitle, subTitleTwo, href }) {
     return (
         <>
             <div className="row mt-5 py-2">
-                <div className="col-md-6 text-center mb-4">
-                    <h4>{subTitle}</h4>
+                <div className="col-md-6 mb-4">
+                    <h6 className="text-center">{subTitle}</h6>
                     {children[0]}
                 </div>
-                <div className="col-md-6 text-center">
-                    <h4>{subTitleTwo}</h4>
+                <div className="col-md-6">
+                    <h6 className="text-center">{subTitleTwo}</h6>
                     {children[1]}
                 </div>
             </div>

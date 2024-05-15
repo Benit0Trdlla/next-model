@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import Image from 'next/image'
-export default function Header({ titleSubject, MyImage, href }) {
+export default function Header({ titleSubject, MyImage, href}) {
     return (
         <>
             <header id="header">
@@ -14,7 +13,7 @@ export default function Header({ titleSubject, MyImage, href }) {
                         )}
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <Link href={href} className="btn btn-warning">Volver</Link>
+                                <a href={href} className="btn btn-warning">Volver</a>
                             </li>
                         </ul>
                     </div>
@@ -55,6 +54,41 @@ export function HeaderHomePage() {
                                 </li>
                                 <li className="nav-item">
                                     <a href="./ingresar" className="btn btn-warning"><small>Iniciar</small></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div className="d-flex justify-content-center">
+                <hr className="w-75 border-secondary m-0" />
+            </div>
+        </>
+    )
+}
+
+export function HeaderLogin() {
+    return (
+        <>
+            <header id="header">
+                <nav className="navbar navbar-expand-md bg-white">
+                    <div className="container">
+                        <a href='./'>
+                            <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
+                        </a>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav ms-auto gap-3">
+                                <li className="nav-item">
+                                    <a href="/" className="btn btn-warning"><small>Home</small></a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="#" className="btn btn-warning"><small>Mi progreso</small></a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="/api/auth/logout" className="btn btn-warning"><small>Cerrar sesión</small></a>
                                 </li>
                             </ul>
                         </div>

@@ -1,16 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from "@/app/components/Header";
-
-export default function ProgressPage() {
+import { HeaderLogin } from "@/app/components/Header";
+import {getSession} from '@auth0/nextjs-auth0';
+export default async function ProgressPage() {
+    const { user } = await getSession();
     return (
         <>
-            <Header MyImage={"/ImgLogoNav.png"} href={"/ingresar"}/>
-            <div className="d-flex justify-content-center">
-                <hr className="w-75 border-secondary m-0" />
-            </div>
+            <HeaderLogin/>
             <div id="inicio" className="container">
-                <h1 className="display-5 font-weight-bold py-4 text-black"><strong>Empieza la prueba!</strong></h1>
+                <h1 className="display-5 font-weight-bold py-4 text-black"><strong> {user.nickname}, Empieza la prueba!</strong></h1>
                 <div className="card-group gap-2 py-3">
                     <div className="card rounded border-dark border-2">
                         <div className="card-body">
