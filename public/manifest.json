@@ -1,12 +1,12 @@
 {
-    "theme_color": "#f69435",
-    "background_color": "#f69435",
+    "theme_color": "#ffc107",
+    "background_color": "#ffc107",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Proyecto Genius",
-    "short_name": "PGenius",
     "description": "Proyecto Genius PWA",
+    "name": "Proyecto Genius",
+    "short_name": "Genius",
     "icons": [
         {
             "src": "/icon-192x192.png",

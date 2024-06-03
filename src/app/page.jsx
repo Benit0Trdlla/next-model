@@ -134,7 +134,7 @@ export default function Home() {
               El Examen de Estado de la Educación Media, conocido como Saber 11°, es una evaluación estandarizada que se aplica en Colombia para medir la calidad de la educación media. El examen está compuesto por cinco áreas: Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés.
               <br />
               <br />
-              Desde el año 2021, el ICFES publica un nuevo reporte de resultados para el examen Saber 11, con el fin de ofrecer una interpretación más completa de los resultados. Este reporte incluye el puntaje global, los percentiles, guías de interpretación, y para cada área evaluada, el nivel de desempeño del estudiante junto con las habilidades y destrezas que representa2.
+              Desde el año 2021, el ICFES publica un nuevo reporte de resultados para el examen Saber 11, con el fin de ofrecer una interpretación más completa de los resultados. Este reporte incluye el puntaje global, los percentiles, guías de interpretación, y para cada área evaluada, el nivel de desempeño del estudiante junto con las habilidades y destrezas que representas.
               <br />
               Para más detalles sobre orientarte en la prueba, saber los niveles de desempeño y cómo interpretar los resultados y utilizarlos, puedes consultar la guía proporcionada por el ICFES, <strong>descargala aquī.</strong>
               <ol className="list-group list-group-numbered">
