@@ -28,7 +28,7 @@ export default function Home() {
             </p>
           </div>
           <div className="col-md-6 row mt-5">
-            <Image className="img-fluid" src="/ImgHome.png" width={800} height={800} alt='Imagen Principal' priority={true} />
+            <Image className="img-fluid" src='/Images/Home.png' width={800} height={800} alt='Imagen Principal' />
           </div>
         </div>
       </div>
@@ -49,13 +49,13 @@ export default function Home() {
         </Cards>
       </CardServicesList>
       {/* PREGUNTAS FRECUENTES  */}
-      <PreguntasFrecuentesLista MyImage={"/ImgPreguntas.png"}>
+      <PreguntasFrecuentesLista MyImage={'/Images/Preguntas.png'}>
         <PreguntasFrecuentes flushheading={"flush-headingOne"} flushcollapse={"flush-collapseOne"} title={"¿Qué es Genius?"}>
           Genius es una plataforma educativa gratuita y de acceso universal que ofrece una variedad de recursos para el
           aprendizaje y entrenamiento de las pruebas saber 11, teniendo en cuenta las áreas evaluadas por el ICFES: <strong>razonamiento lógico, comprensión lectora, biología, ciencias sociales e inglés.</strong>
         </PreguntasFrecuentes>
         <PreguntasFrecuentes flushheading={"flush-headingTwo"} flushcollapse={"flush-collapseTwo"} title={"¿Cuáles son las características y beneficios de Genius?"}>
-          - <strong>Acceso gratuito</strong>: Genius es completamente gratuita para todos los usuarios.
+          - <strong>Acceso universal</strong>: Genius es de acceso universal para todos y todas.
           <br />
           - <strong>Flexibilidad</strong>: Puedes aprender a tu propio ritmo y desde cualquier lugar sin conexión a internet.
           <br />
@@ -70,7 +70,7 @@ export default function Home() {
           Comienza a responder las preguntas y tendrás acceso a contenido relacionado con el temario.
         </PreguntasFrecuentes>
         <PreguntasFrecuentes flushheading={"flush-headingFour"} flushcollapse={"flush-collapseFour"} title={"¿Cómo puedo crear una cuenta?"}>
-          No es necesario crear una cuenta para utilizar Genius, ya que es completamente <strong>gratuita y de acceso universal.</strong>
+          Puedes crear un usuario desde tu cuenta personal o desde la cuenta de tus tutores legales. Genius nunca almacenará datos personales en su base de datos.
         </PreguntasFrecuentes>
         <PreguntasFrecuentes flushheading={"flush-headingFive"} flushcollapse={"flush-collapseFive"} title={"Si hay alguna pregunta o contenido equivocado, ¿cómo puedo contactarlos?"}>
           Si encuentras alguna pregunta incorrecta o tienes alguna duda, contáctanos a través del correo electrónico <strong>soporte@proyectogenius.org</strong>. Estaremos encantados de ayudarte.
@@ -149,13 +149,13 @@ export default function Home() {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="/NivelesdeDesempeño.zip" download="NivelesdeDesempeño.zip">Descargar Niveles de Desempeño</a>
+                    <a className="dropdown-item" href="/Documents/NivelesdeDesempeño.zip" download='/Documents/NivelesdeDesempeño.zip'>Descargar Niveles de Desempeño</a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/GuiadeOrientaciónSaber.pdf" download={"GuiadeOrientaciónSaber.pdf"}>Descargar Guia de Orientación</a>
+                    <a className="dropdown-item" href="/Documents/NivelesdeDesempeño.zip" download={'/Documents/NivelesdeDesempeño.zip'}>Descargar Guia de Orientación</a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/Infografias.zip" download={"Infografias.zip"}>Descargar Infografías</a>
+                    <a className="dropdown-item" href="/Documents/Infografias.zip" download={'/Documents/Infografias.zip'}>Descargar Infografías</a>
                   </li>
                 </ul>
               </div>
@@ -189,14 +189,14 @@ export default function Home() {
               </button>
             </div>
             <div className="col-md-6 d-flex justify-content-center py-4">
-              <Image className="img-fluid" src="/ImgDonaciones.png" width={250} height={250} alt='Imagen de donaciones' />
+              <Image className="img-fluid" src='/Images/Donaciones.png' width={250} height={250} alt='Imagen de donaciones' priority={true}/>
             </div>
           </div>
         </div>
       </section>
       {/* Footer  */}
       <GoTopButton />
-      <Footer MyImage={"/ImgLogoFooter.png"} titleMiddle={"Un proyecto de Fundación Caribe Enseña"} titleEnd={"Contactanos"}>
+      <Footer srcImg={'/Images/Logo/Footer.png'} titleMiddle={"Un proyecto de Fundación Caribe Enseña"} titleEnd={"Contactanos"}>
         <a className="link-secondary text-decoration-none text-primary" href="https://caribeensena.org/" target="_blank">@caribeensena.org</a>
         <ul className="list-unstyled">
           <p className="mb-0 mt-2">

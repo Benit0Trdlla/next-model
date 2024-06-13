@@ -4,7 +4,7 @@ import { RowList, Row } from '../components/ExplanationSubject';
 export default function MathExplanationPage() {
     return (
         <>
-            <Header MyImage="/ImgLogoNav.png" href={"/progress"} />
+            <Header MyImage={'/Images/Logo/Nav.png'} href={"/progress"} />
             <RowList title="Razonamiento Logico">
                 <Row subTitle="CONTENIDO A EVALUAR DE RAZONAMIENTO LÓGICO" subTitleTwo="SISTEMA DE EVALUACIÓN DE RAZONAMIENTO LÓGICO" href={"/razonamientologico/niveluno"}>
                     <div>

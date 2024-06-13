@@ -1,5 +1,5 @@
 import Image from 'next/image'
-export default function Header({ titleSubject, MyImage, href}) {
+export default function Header({ titleSubject, MyImage, href }) {
     return (
         <>
             <header id="header">
@@ -32,9 +32,7 @@ export function HeaderHomePage() {
             <header id="header">
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
-                        <a href='./'>
-                            <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
-                        </a>
+                        <Image src='/Images/Logo/Nav.png' width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} />
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -74,7 +72,7 @@ export function HeaderLogin() {
                 <nav className="navbar navbar-expand-md bg-white">
                     <div className="container">
                         <a href='./'>
-                            <Image src="/ImgLogoNav.png" width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
+                            <Image src='/Images/Logo/Nav.png' width={50} height={60} className="navbar-brand img-fluid" alt="Logo Proyecto Genius" style={{ width: "auto" }} priority={true} />
                         </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span className="navbar-toggler-icon"></span>

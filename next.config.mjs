@@ -7,12 +7,16 @@ const withPWA = withPWAInit({
     // disable: process.env.NODE_ENV === "development",
     register: true,
     scope: "/",
-    sw: "service-worker.js",
+    // sw: "service-worker.js",
     fallbacks:{
         document: "/~offline",
     },
+    customWorkerSrc: "service-worker",
+    // cacheOnFrontendNav: true,
+    // cacheStartUrl: true,
+    // dynamicStartUrl: true,
+
     // publicExcludes: ["globals.css"],
-    // cacheOnFrontendNav: true
 });
 
 export default withPWA({

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-export function Footer({ children, MyImage, titleMiddle, titleEnd }) {
+export function Footer({ children, srcImg, titleMiddle, titleEnd }) {
     return (
         <footer className="footer mt-auto">
             <section className="bg-light py-4 py-md-5 py-xl-8 border-top">
@@ -8,7 +8,7 @@ export function Footer({ children, MyImage, titleMiddle, titleEnd }) {
                         <div className="col-12 col-md-4 col-lg-3 col-xl-2">
                             <div className="widget">
                                 <div className='d-flex justify-content-center align-items-center'>
-                                    <Image src={MyImage} width={120} height={120} alt='Logo Proyecto Genius' />
+                                    <Image src={srcImg} width={120} height={120} alt='Logo Proyecto Genius' priority={true}/>
                                 </div>
                             </div>
                         </div>

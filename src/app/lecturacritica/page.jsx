@@ -4,7 +4,7 @@ import { RowList, Row } from '../components/ExplanationSubject';
 export default function LecturaCriticaPage() {
     return (
         <>
-            <Header MyImage="/ImgLogoNav.png" href={"/progress"} />
+            <Header MyImage={'/Images/Logo/Nav.png'} href={"/progress"} />
             <RowList title="Lectura Critica">
                 <Row subTitle="CONTENIDO A EVALUAR DE LECTURA CRÍTICA" subTitleTwo="SISTEMA DE EVALUACIÓN DE LECTURA CRÍTICA" href={"/lecturacritica/niveluno"}>
                     <div>

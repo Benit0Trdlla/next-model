@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "/public/global.css";
+import "/public/css/MyStyle/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import InstallBootstrap from "./InstallBootstrap";
 import { UserProvider } from '@auth0/nextjs-auth0/client';
@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="shortcut icon" href="/ImgLogoPestaña.png" />
+        <link rel="shortcut icon" href='/Images/Logo/Pestaña.png' />
       </head>
       <body className={inter.className}>
         <UserProvider>
