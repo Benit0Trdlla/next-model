@@ -4,6 +4,7 @@ import Cronometro from '../../components/Cronometro';
 import Header from "@/app/components/Header";
 import TheoreticalContent from "@/app/components/TheoreticalContent";
 import Enunciado from "@/app/components/Enunciado";
+import AlertFinishLevel from "@/app/components/AlertFinishLevel";
 import { StructureActivities, ContentActivities } from "@/app/components/Activities";
 import Link from "next/link";
 
@@ -20,6 +21,7 @@ export default async function NivelUnoPage({ searchParams }) {
         <>
             <Header titleSubject={"Razonamiento Lógico"} href={"/progress"} />
             <Cronometro stateTimer={stateTimer} />
+            <AlertFinishLevel stateAlert={stateTimer} level={'1'} />
             <StructureActivities>
                 <ContentActivities>
                     <Enunciado Enunciado={pregunta.Enunciado} />

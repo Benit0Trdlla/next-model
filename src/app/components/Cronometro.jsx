@@ -1,14 +1,14 @@
 'use client'
 import { useState, useEffect } from 'react';
 
-export default function Cronometro({stateTimer}) {
+export default function Cronometro({ stateTimer }) {
     // console.log("que pasa aca", mood)
     const [segundos, setSegundos] = useState(0);
     const [corriendo, setCorriendo] = useState(true);
-    
+
     useEffect(() => {
         let interval;
-        if(stateTimer === "false") {
+        if (stateTimer === "false") {
             setCorriendo(false)
         }
         if (corriendo) {
